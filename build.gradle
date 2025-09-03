@@ -1,0 +1,33 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '2.2.0'
+    id 'org.jetbrains.kotlin.plugin.serialization' version '1.6.21'
+}
+
+group 'hu.akos.hollo.szabo'
+version '1.0-SNAPSHOT'
+
+
+repositories {
+    mavenCentral()
+    google()
+    mavenLocal()
+}
+
+ext {
+    koin_version = '4.1.1-Beta1'
+}
+
+dependencies {
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib"
+    implementation "org.jetbrains.kotlin:kotlin-reflect"
+
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.4'
+}
+
+kotlin {
+    jvmToolchain {
+        // Target version of generated JVM bytecode
+        languageVersion.set(JavaLanguageVersion.of(17))
+    }
+}

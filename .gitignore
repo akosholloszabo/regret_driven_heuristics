@@ -1,0 +1,465 @@
+# Created by https://www.toptal.com/developers/gitignore/api/intellij,kotlin,gradle
+# Edit at https://www.toptal.com/developers/gitignore?templates=intellij,kotlin,gradle
+
+### Intellij ###
+# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio, WebStorm and Rider
+# Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
+
+# User-specific stuff
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
+
+src/main/resources/input/de-smet/belgium-road-time-n2750-k55.vrp
+# AWS User-specific
+.idea/**/aws.xml
+
+# Generated files
+.idea/**/contentModel.xml
+
+# Sensitive or high-churn files
+.idea/**/dataSources/
+.idea/**/dataSources.ids
+.idea/**/dataSources.local.xml
+.idea/**/sqlDataSources.xml
+.idea/**/dynamic.xml
+.idea/**/uiDesigner.xml
+.idea/**/dbnavigator.xml
+
+# Gradle
+.idea/**/gradle.xml
+.idea/**/libraries
+
+# Gradle and Maven with auto-import
+# When using Gradle or Maven with auto-import, you should exclude module files,
+# since they will be recreated, and may cause churn.  Uncomment if using
+# auto-import.
+# .idea/artifacts
+# .idea/compiler.xml
+# .idea/jarRepositories.xml
+# .idea/modules.xml
+# .idea/*.iml
+# .idea/modules
+# *.iml
+# *.ipr
+
+# CMake
+cmake-build-*/
+
+# Mongo Explorer plugin
+.idea/**/mongoSettings.xml
+
+# File-based project format
+*.iws
+
+# IntelliJ
+out/
+
+# mpeltonen/sbt-idea plugin
+.idea_modules/
+
+# JIRA plugin
+atlassian-ide-plugin.xml
+
+# Cursive Clojure plugin
+.idea/replstate.xml
+
+# SonarLint plugin
+.idea/sonarlint/
+
+# Crashlytics plugin (for Android Studio and IntelliJ)
+com_crashlytics_export_strings.xml
+crashlytics.properties
+crashlytics-build.properties
+fabric.properties
+
+# Editor-based Rest Client
+.idea/httpRequests
+
+# Android studio 3.1+ serialized cache file
+.idea/caches/build_file_checksums.ser
+
+### Intellij Patch ###
+# Comment Reason: https://github.com/joeblau/gitignore.io/issues/186#issuecomment-215987721
+
+# *.iml
+# modules.xml
+# .idea/misc.xml
+# *.ipr
+
+# Sonarlint plugin
+# https://plugins.jetbrains.com/plugin/7973-sonarlint
+.idea/**/sonarlint/
+
+# SonarQube Plugin
+# https://plugins.jetbrains.com/plugin/7238-sonarqube-community-plugin
+.idea/**/sonarIssues.xml
+
+# Markdown Navigator plugin
+# https://plugins.jetbrains.com/plugin/7896-markdown-navigator-enhanced
+.idea/**/markdown-navigator.xml
+.idea/**/markdown-navigator-enh.xml
+.idea/**/markdown-navigator/
+
+# Cache file creation bug
+# See https://youtrack.jetbrains.com/issue/JBR-2257
+.idea/$CACHE_FILE$
+
+# CodeStream plugin
+# https://plugins.jetbrains.com/plugin/12206-codestream
+.idea/codestream.xml
+
+# Azure Toolkit for IntelliJ plugin
+# https://plugins.jetbrains.com/plugin/8053-azure-toolkit-for-intellij
+.idea/**/azureSettings.xml
+
+### Kotlin ###
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.nar
+*.ear
+*.tar.gz
+*.rar
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+replay_pid*
+
+### Gradle ###
+.gradle
+**/build/
+!src/**/build/
+
+# Ignore Gradle GUI config
+gradle-app.setting
+
+# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
+!gradle-wrapper.jar
+
+# Avoid ignore Gradle wrappper properties
+!gradle-wrapper.properties
+
+# Cache of project
+.gradletasknamecache
+
+# Eclipse Gradle plugin generated files
+# Eclipse Core
+.project
+# JDT-specific (Eclipse Java Development Tools)
+.classpath
+
+### Gradle Patch ###
+# Java heap dump
+*.hprof
+
+# End of https://www.toptal.com/developers/gitignore/api/intellij,kotlin,gradle
+/src/main/resources/input/hungarianExample/between.json
+/.idea/
+/gradle/
+output/generated_tsp_tasks/size1024instance0.json
+output/generated_tsp_tasks/size1024instance1.json
+output/generated_tsp_tasks/size1024instance2.json
+output/generated_tsp_tasks/size1024instance3.json
+output/generated_tsp_tasks/size1024instance4.json
+output/generated_tsp_tasks/size1024instance5.json
+output/generated_tsp_tasks/size1024instance6.json
+output/generated_tsp_tasks/size1024instance7.json
+output/generated_tsp_tasks/size1024instance8.json
+output/generated_tsp_tasks/size1024instance9.json
+output/generated_tsp_tasks/size128instance0.json
+output/generated_tsp_tasks/size128instance1.json
+output/generated_tsp_tasks/size128instance2.json
+output/generated_tsp_tasks/size128instance3.json
+output/generated_tsp_tasks/size128instance4.json
+output/generated_tsp_tasks/size128instance5.json
+output/generated_tsp_tasks/size128instance6.json
+output/generated_tsp_tasks/size128instance7.json
+output/generated_tsp_tasks/size128instance8.json
+output/generated_tsp_tasks/size128instance9.json
+output/generated_tsp_tasks/size16instance0.json
+output/generated_tsp_tasks/size16instance1.json
+output/generated_tsp_tasks/size16instance2.json
+output/generated_tsp_tasks/size16instance3.json
+output/generated_tsp_tasks/size16instance4.json
+output/generated_tsp_tasks/size16instance5.json
+output/generated_tsp_tasks/size16instance6.json
+output/generated_tsp_tasks/size16instance7.json
+output/generated_tsp_tasks/size16instance8.json
+output/generated_tsp_tasks/size16instance9.json
+output/generated_tsp_tasks/size256instance0.json
+output/generated_tsp_tasks/size256instance1.json
+output/generated_tsp_tasks/size256instance2.json
+output/generated_tsp_tasks/size256instance3.json
+output/generated_tsp_tasks/size256instance4.json
+output/generated_tsp_tasks/size256instance5.json
+output/generated_tsp_tasks/size256instance6.json
+output/generated_tsp_tasks/size256instance7.json
+output/generated_tsp_tasks/size256instance8.json
+output/generated_tsp_tasks/size256instance9.json
+output/generated_tsp_tasks/size32instance0.json
+output/generated_tsp_tasks/size32instance1.json
+output/generated_tsp_tasks/size32instance2.json
+output/generated_tsp_tasks/size32instance3.json
+output/generated_tsp_tasks/size32instance4.json
+output/generated_tsp_tasks/size32instance5.json
+output/generated_tsp_tasks/size32instance6.json
+output/generated_tsp_tasks/size32instance7.json
+output/generated_tsp_tasks/size32instance8.json
+output/generated_tsp_tasks/size32instance9.json
+output/generated_tsp_tasks/size4instance0.json
+output/generated_tsp_tasks/size4instance1.json
+output/generated_tsp_tasks/size4instance2.json
+output/generated_tsp_tasks/size4instance3.json
+output/generated_tsp_tasks/size4instance4.json
+output/generated_tsp_tasks/size4instance5.json
+output/generated_tsp_tasks/size4instance6.json
+output/generated_tsp_tasks/size4instance7.json
+output/generated_tsp_tasks/size4instance8.json
+output/generated_tsp_tasks/size4instance9.json
+output/generated_tsp_tasks/size512instance0.json
+output/generated_tsp_tasks/size512instance1.json
+output/generated_tsp_tasks/size512instance2.json
+output/generated_tsp_tasks/size512instance3.json
+output/generated_tsp_tasks/size512instance4.json
+output/generated_tsp_tasks/size512instance5.json
+output/generated_tsp_tasks/size512instance6.json
+output/generated_tsp_tasks/size512instance7.json
+output/generated_tsp_tasks/size512instance8.json
+output/generated_tsp_tasks/size512instance9.json
+output/generated_tsp_tasks/size64instance0.json
+output/generated_tsp_tasks/size64instance1.json
+output/generated_tsp_tasks/size64instance2.json
+output/generated_tsp_tasks/size64instance3.json
+output/generated_tsp_tasks/size64instance4.json
+output/generated_tsp_tasks/size64instance5.json
+output/generated_tsp_tasks/size64instance6.json
+output/generated_tsp_tasks/size64instance7.json
+output/generated_tsp_tasks/size64instance8.json
+output/generated_tsp_tasks/size64instance9.json
+output/generated_tsp_tasks/size8instance0.json
+output/generated_tsp_tasks/size8instance1.json
+output/generated_tsp_tasks/size8instance2.json
+output/generated_tsp_tasks/size8instance3.json
+output/generated_tsp_tasks/size8instance4.json
+output/generated_tsp_tasks/size8instance5.json
+output/generated_tsp_tasks/size8instance6.json
+output/generated_tsp_tasks/size8instance7.json
+output/generated_tsp_tasks/size8instance8.json
+output/generated_tsp_tasks/size8instance9.json
+output/generated_tsp_tasks_128/instance0.json
+output/generated_tsp_tasks_128/instance1.json
+output/generated_tsp_tasks_128/instance10.json
+output/generated_tsp_tasks_128/instance11.json
+output/generated_tsp_tasks_128/instance12.json
+output/generated_tsp_tasks_128/instance13.json
+output/generated_tsp_tasks_128/instance14.json
+output/generated_tsp_tasks_128/instance15.json
+output/generated_tsp_tasks_128/instance16.json
+output/generated_tsp_tasks_128/instance17.json
+output/generated_tsp_tasks_128/instance18.json
+output/generated_tsp_tasks_128/instance19.json
+output/generated_tsp_tasks_128/instance2.json
+output/generated_tsp_tasks_128/instance20.json
+output/generated_tsp_tasks_128/instance21.json
+output/generated_tsp_tasks_128/instance22.json
+output/generated_tsp_tasks_128/instance23.json
+output/generated_tsp_tasks_128/instance24.json
+output/generated_tsp_tasks_128/instance25.json
+output/generated_tsp_tasks_128/instance26.json
+output/generated_tsp_tasks_128/instance27.json
+output/generated_tsp_tasks_128/instance28.json
+output/generated_tsp_tasks_128/instance29.json
+output/generated_tsp_tasks_128/instance3.json
+output/generated_tsp_tasks_128/instance30.json
+output/generated_tsp_tasks_128/instance31.json
+output/generated_tsp_tasks_128/instance32.json
+output/generated_tsp_tasks_128/instance33.json
+output/generated_tsp_tasks_128/instance34.json
+output/generated_tsp_tasks_128/instance35.json
+output/generated_tsp_tasks_128/instance36.json
+output/generated_tsp_tasks_128/instance37.json
+output/generated_tsp_tasks_128/instance38.json
+output/generated_tsp_tasks_128/instance39.json
+output/generated_tsp_tasks_128/instance4.json
+output/generated_tsp_tasks_128/instance40.json
+output/generated_tsp_tasks_128/instance41.json
+output/generated_tsp_tasks_128/instance42.json
+output/generated_tsp_tasks_128/instance43.json
+output/generated_tsp_tasks_128/instance44.json
+output/generated_tsp_tasks_128/instance45.json
+output/generated_tsp_tasks_128/instance46.json
+output/generated_tsp_tasks_128/instance47.json
+output/generated_tsp_tasks_128/instance48.json
+output/generated_tsp_tasks_128/instance49.json
+output/generated_tsp_tasks_128/instance5.json
+output/generated_tsp_tasks_128/instance50.json
+output/generated_tsp_tasks_128/instance51.json
+output/generated_tsp_tasks_128/instance52.json
+output/generated_tsp_tasks_128/instance53.json
+output/generated_tsp_tasks_128/instance54.json
+output/generated_tsp_tasks_128/instance55.json
+output/generated_tsp_tasks_128/instance56.json
+output/generated_tsp_tasks_128/instance57.json
+output/generated_tsp_tasks_128/instance58.json
+output/generated_tsp_tasks_128/instance59.json
+output/generated_tsp_tasks_128/instance6.json
+output/generated_tsp_tasks_128/instance60.json
+output/generated_tsp_tasks_128/instance61.json
+output/generated_tsp_tasks_128/instance62.json
+output/generated_tsp_tasks_128/instance63.json
+output/generated_tsp_tasks_128/instance64.json
+output/generated_tsp_tasks_128/instance65.json
+output/generated_tsp_tasks_128/instance66.json
+output/generated_tsp_tasks_128/instance67.json
+output/generated_tsp_tasks_128/instance68.json
+output/generated_tsp_tasks_128/instance69.json
+output/generated_tsp_tasks_128/instance7.json
+output/generated_tsp_tasks_128/instance70.json
+output/generated_tsp_tasks_128/instance71.json
+output/generated_tsp_tasks_128/instance72.json
+output/generated_tsp_tasks_128/instance73.json
+output/generated_tsp_tasks_128/instance74.json
+output/generated_tsp_tasks_128/instance75.json
+output/generated_tsp_tasks_128/instance76.json
+output/generated_tsp_tasks_128/instance77.json
+output/generated_tsp_tasks_128/instance78.json
+output/generated_tsp_tasks_128/instance79.json
+output/generated_tsp_tasks_128/instance8.json
+output/generated_tsp_tasks_128/instance80.json
+output/generated_tsp_tasks_128/instance81.json
+output/generated_tsp_tasks_128/instance82.json
+output/generated_tsp_tasks_128/instance83.json
+output/generated_tsp_tasks_128/instance84.json
+output/generated_tsp_tasks_128/instance85.json
+output/generated_tsp_tasks_128/instance86.json
+output/generated_tsp_tasks_128/instance87.json
+output/generated_tsp_tasks_128/instance88.json
+output/generated_tsp_tasks_128/instance89.json
+output/generated_tsp_tasks_128/instance9.json
+output/generated_tsp_tasks_128/instance90.json
+output/generated_tsp_tasks_128/instance91.json
+output/generated_tsp_tasks_128/instance92.json
+output/generated_tsp_tasks_128/instance93.json
+output/generated_tsp_tasks_128/instance94.json
+output/generated_tsp_tasks_128/instance95.json
+output/generated_tsp_tasks_128/instance96.json
+output/generated_tsp_tasks_128/instance97.json
+output/generated_tsp_tasks_128/instance98.json
+output/generated_tsp_tasks_128/instance99.json
+output/generated_tsp_tasks_64/instance0.json
+output/generated_tsp_tasks_64/instance1.json
+output/generated_tsp_tasks_64/instance10.json
+output/generated_tsp_tasks_64/instance11.json
+output/generated_tsp_tasks_64/instance12.json
+output/generated_tsp_tasks_64/instance13.json
+output/generated_tsp_tasks_64/instance14.json
+output/generated_tsp_tasks_64/instance15.json
+output/generated_tsp_tasks_64/instance16.json
+output/generated_tsp_tasks_64/instance17.json
+output/generated_tsp_tasks_64/instance18.json
+output/generated_tsp_tasks_64/instance19.json
+output/generated_tsp_tasks_64/instance2.json
+output/generated_tsp_tasks_64/instance20.json
+output/generated_tsp_tasks_64/instance21.json
+output/generated_tsp_tasks_64/instance22.json
+output/generated_tsp_tasks_64/instance23.json
+output/generated_tsp_tasks_64/instance24.json
+output/generated_tsp_tasks_64/instance25.json
+output/generated_tsp_tasks_64/instance26.json
+output/generated_tsp_tasks_64/instance27.json
+output/generated_tsp_tasks_64/instance28.json
+output/generated_tsp_tasks_64/instance29.json
+output/generated_tsp_tasks_64/instance3.json
+output/generated_tsp_tasks_64/instance30.json
+output/generated_tsp_tasks_64/instance31.json
+output/generated_tsp_tasks_64/instance32.json
+output/generated_tsp_tasks_64/instance33.json
+output/generated_tsp_tasks_64/instance34.json
+output/generated_tsp_tasks_64/instance35.json
+output/generated_tsp_tasks_64/instance36.json
+output/generated_tsp_tasks_64/instance37.json
+output/generated_tsp_tasks_64/instance38.json
+output/generated_tsp_tasks_64/instance39.json
+output/generated_tsp_tasks_64/instance4.json
+output/generated_tsp_tasks_64/instance40.json
+output/generated_tsp_tasks_64/instance41.json
+output/generated_tsp_tasks_64/instance42.json
+output/generated_tsp_tasks_64/instance43.json
+output/generated_tsp_tasks_64/instance44.json
+output/generated_tsp_tasks_64/instance45.json
+output/generated_tsp_tasks_64/instance46.json
+output/generated_tsp_tasks_64/instance47.json
+output/generated_tsp_tasks_64/instance48.json
+output/generated_tsp_tasks_64/instance49.json
+output/generated_tsp_tasks_64/instance5.json
+output/generated_tsp_tasks_64/instance50.json
+output/generated_tsp_tasks_64/instance51.json
+output/generated_tsp_tasks_64/instance52.json
+output/generated_tsp_tasks_64/instance53.json
+output/generated_tsp_tasks_64/instance54.json
+output/generated_tsp_tasks_64/instance55.json
+output/generated_tsp_tasks_64/instance56.json
+output/generated_tsp_tasks_64/instance57.json
+output/generated_tsp_tasks_64/instance58.json
+output/generated_tsp_tasks_64/instance59.json
+output/generated_tsp_tasks_64/instance6.json
+output/generated_tsp_tasks_64/instance60.json
+output/generated_tsp_tasks_64/instance61.json
+output/generated_tsp_tasks_64/instance62.json
+output/generated_tsp_tasks_64/instance63.json
+output/generated_tsp_tasks_64/instance64.json
+output/generated_tsp_tasks_64/instance65.json
+output/generated_tsp_tasks_64/instance66.json
+output/generated_tsp_tasks_64/instance67.json
+output/generated_tsp_tasks_64/instance68.json
+output/generated_tsp_tasks_64/instance69.json
+output/generated_tsp_tasks_64/instance7.json
+output/generated_tsp_tasks_64/instance70.json
+output/generated_tsp_tasks_64/instance71.json
+output/generated_tsp_tasks_64/instance72.json
+output/generated_tsp_tasks_64/instance73.json
+output/generated_tsp_tasks_64/instance74.json
+output/generated_tsp_tasks_64/instance75.json
+output/generated_tsp_tasks_64/instance76.json
+output/generated_tsp_tasks_64/instance77.json
+output/generated_tsp_tasks_64/instance78.json
+output/generated_tsp_tasks_64/instance79.json
+output/generated_tsp_tasks_64/instance8.json
+output/generated_tsp_tasks_64/instance80.json
+output/generated_tsp_tasks_64/instance81.json
+output/generated_tsp_tasks_64/instance82.json
+output/generated_tsp_tasks_64/instance83.json
+output/generated_tsp_tasks_64/instance84.json
+output/generated_tsp_tasks_64/instance85.json
+output/generated_tsp_tasks_64/instance86.json
+output/generated_tsp_tasks_64/instance87.json
+output/generated_tsp_tasks_64/instance88.json
+output/generated_tsp_tasks_64/instance89.json
+output/generated_tsp_tasks_64/instance9.json
+output/generated_tsp_tasks_64/instance90.json
+output/generated_tsp_tasks_64/instance91.json
+output/generated_tsp_tasks_64/instance92.json
+output/generated_tsp_tasks_64/instance93.json
+output/generated_tsp_tasks_64/instance94.json
+output/generated_tsp_tasks_64/instance95.json
+output/generated_tsp_tasks_64/instance96.json
+output/generated_tsp_tasks_64/instance97.json
+output/generated_tsp_tasks_64/instance98.json
+output/generated_tsp_tasks_64/instance99.json
+output
+/src/main/resources/input/
