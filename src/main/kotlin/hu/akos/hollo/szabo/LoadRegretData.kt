@@ -1,17 +1,13 @@
 package hu.akos.hollo.szabo
 
-import hu.akos.hollo.szabo.utils.DoubleMatrix
-import hu.akos.hollo.szabo.utils.asDoubleVector
-import hu.akos.hollo.szabo.utils.asImmutable
-import hu.akos.hollo.szabo.utils.toDoubleVector
 import java.io.File
 
 
 data class RegretData(
     val file: String,
-    val distanceMatrix: DoubleMatrix,
-    val expectedRegretMatrix: DoubleMatrix,
-    val predictedRegretMatrix: DoubleMatrix,
+    val distanceMatrix: Array<DoubleArray>,
+    val expectedRegretMatrix: Array<DoubleArray>,
+    val predictedRegretMatrix: Array<DoubleArray>,
     val optCost: Double,
     val numberOfIterations: Int,
     val initialCost: Long,
@@ -34,12 +30,9 @@ fun loadRegrets(sourceFolder: File): List<RegretData> {
                             .split(" ")
                             .map { it.toDouble() }
                             .toDoubleArray()
-                            .asDoubleVector()
                     }
                     .toList()
                     .toTypedArray()
-                    .asImmutable()
-                    .let { rows -> DoubleMatrix(rows) }
             }
 
             val expectedRegretMatrix = file.useLines { lines ->
@@ -55,12 +48,9 @@ fun loadRegrets(sourceFolder: File): List<RegretData> {
                             .split(" ")
                             .map { it.toDouble() }
                             .toDoubleArray()
-                            .asDoubleVector()
                     }
                     .toList()
                     .toTypedArray()
-                    .asImmutable()
-                    .let { rows -> DoubleMatrix(rows) }
             }
 
             val predictedRegretMatrix = file.useLines { lines ->
@@ -76,12 +66,9 @@ fun loadRegrets(sourceFolder: File): List<RegretData> {
                             .split(" ")
                             .map { it.toDouble() }
                             .toDoubleArray()
-                            .toDoubleVector()
                     }
                     .toList()
                     .toTypedArray()
-                    .asImmutable()
-                    .let { rows -> DoubleMatrix(rows) }
             }
 
             val optCost = file.useLines { lines ->

@@ -1,13 +1,12 @@
 package hu.akos.hollo.szabo
 
-import hu.akos.hollo.szabo.utils.ImmutableIntArray
 import hu.akos.hollo.szabo.utils.Permutation
 
 
 class ThreeOptOperator {
     fun apply(
         permutation: Permutation,
-        positions: ImmutableIntArray,
+        positions: IntArray,
     ) {
         require(positions.size == 3) { "Three positions are expected!" }
         require(positions[0] < positions[1] && positions[1] < positions[2]) {
@@ -27,7 +26,7 @@ class ThreeOptOperator {
 
     fun revert(
         permutation: Permutation,
-        positions: ImmutableIntArray,
+        positions: IntArray,
     ) {
         require(positions.size == 3) { "Three positions are expected!" }
         require(positions[0] < positions[1] && positions[1] < positions[2]) { "Three positions should be ordered!" }

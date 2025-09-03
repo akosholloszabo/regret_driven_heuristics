@@ -3,9 +3,11 @@ package hu.akos.hollo.szabo
 //PROTECTED
 
 
-import hu.akos.hollo.szabo.utils.DoubleMatrix
 import hu.akos.hollo.szabo.utils.GraphEdge
 import hu.akos.hollo.szabo.utils.Permutation
+import hu.akos.hollo.szabo.utils.dimensions
+import hu.akos.hollo.szabo.utils.mapEachEntryIndexed
+import hu.akos.hollo.szabo.utils.x
 
 //1. select best edge from each source
 //2. order selected edges by weight
@@ -13,7 +15,7 @@ import hu.akos.hollo.szabo.utils.Permutation
 //4. exclude conflicting edges
 //repeat
 
-fun oneShotEdgeBuilder(regret: DoubleMatrix): Permutation {
+fun oneShotEdgeBuilder(regret: Array<DoubleArray>): Permutation {
     val sequentialRepresentation = IntArray(regret.dimensions.x) { Int.MIN_VALUE }
     val inverseSequentialRepresentation = IntArray(regret.dimensions.x) { Int.MIN_VALUE }
     val sequencesFromSource = IntArray(regret.dimensions.x) { Int.MIN_VALUE }

@@ -2,10 +2,11 @@ package hu.akos.hollo.szabo
 
 //PROTECTED
 
-import hu.akos.hollo.szabo.utils.DoubleMatrix
 import hu.akos.hollo.szabo.utils.GraphEdge
 import hu.akos.hollo.szabo.utils.Permutation
-import hu.akos.hollo.szabo.utils.asImmutable
+import hu.akos.hollo.szabo.utils.dimensions
+import hu.akos.hollo.szabo.utils.get
+import hu.akos.hollo.szabo.utils.x
 import java.io.File
 import kotlin.math.sqrt
 import kotlin.time.measureTime
@@ -115,7 +116,7 @@ fun DoubleArray.statistics(): DoubleStatistics {
 fun threeOptCycle(
     permutation: Permutation,
     regretRecord: RegretData,
-    regretMatrix: DoubleMatrix,
+    regretMatrix: Array<DoubleArray>,
     cost: Double
 ): Double {
     var bestCost = cost
@@ -191,13 +192,13 @@ fun threeOptCycle(
                     continue
                 }
 
-                threeOptOperator.apply(permutation, selectedPositions.asImmutable())
+                threeOptOperator.apply(permutation, selectedPositions)
                 val newCost = calcCostOfTspSolution(permutation, regretRecord.distanceMatrix)
                 if (newCost <= bestCost) {
                     bestCost = newCost
                 } else {
                     //TODO: NOT EFFICIENT!
-                    threeOptOperator.revert(permutation, selectedPositions.asImmutable())
+                    threeOptOperator.revert(permutation, selectedPositions)
                 }
             }
         }
@@ -209,7 +210,7 @@ fun threeOptCycle(
 private fun positionToWeight(
     position: Int,
     permutation: Permutation,
-    matrix: DoubleMatrix,
+    matrix: Array<DoubleArray>,
 ): Double =
     when (position) {
         0 -> matrix[permutation.size, permutation[0]]
@@ -226,7 +227,7 @@ private fun positionToVertexIndex(
         else -> permutation[position - 1]
     }
 
-fun calcCostOfTspSolution(permutation: Permutation, distanceMatrix: DoubleMatrix): Double =
+fun calcCostOfTspSolution(permutation: Permutation, distanceMatrix: Array<DoubleArray>): Double =
     (1 until permutation.size)
         .sumOf { index ->
             distanceMatrix[permutation[index - 1], permutation[index]]
