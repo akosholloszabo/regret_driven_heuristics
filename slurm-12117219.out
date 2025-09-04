@@ -1,0 +1,38 @@
+Starting a Gradle Daemon, 1 incompatible and 1 stopped Daemons could not be reused, use --status for details
+> Task :checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :processResources NO-SOURCE
+> Task :compileKotlin
+> Task :compileJava NO-SOURCE
+> Task :classes UP-TO-DATE
+
+> Task :run
+ATSP100 | Instances: 30 | iterations: 9 | Avg Gap: 2.055 % | Total Time: 6.247 s
+ATSP100 | Instances: 30 | iterations: 8 | Avg Gap: 2.090 % | Total Time: 5.224 s
+ATSP100 | Instances: 30 | iterations: 0 | Avg Gap: 7.790 % | Total Time: 0.001 s
+ATSP150 | Instances: 30 | iterations: 2 | Avg Gap: 3.625 % | Total Time: 4.695 s
+ATSP150 | Instances: 30 | iterations: 1 | Avg Gap: 4.754 % | Total Time: 2.345 s
+ATSP150 | Instances: 30 | iterations: 0 | Avg Gap: 8.545 % | Total Time: 0.030 s
+ATSP250 | Instances: 30 | iterations: 1 | Avg Gap: 5.013 % | Total Time: 11.223 s
+ATSP250 | Instances: 30 | iterations: 0 | Avg Gap: 7.969 % | Total Time: 0.093 s
+Exception in thread "main" java.util.NoSuchElementException: Array is empty.
+	at kotlin.collections.ArraysKt___ArraysKt.last(_Arrays.kt:1981)
+	at hu.akos.hollo.szabo.RegretBasedLocalSearchModelEvaluationKt.statistics(RegretBasedLocalSearchModelEvaluation.kt:116)
+	at hu.akos.hollo.szabo.RegretBasedLocalSearchModelEvaluationKt.main(RegretBasedLocalSearchModelEvaluation.kt:74)
+	at hu.akos.hollo.szabo.RegretBasedLocalSearchModelEvaluationKt.main(RegretBasedLocalSearchModelEvaluation.kt)
+
+> Task :run FAILED
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':run'.
+> Process 'command '/project/c_gnn_001/tools/java/jdk-17.0.12/bin/java'' finished with non-zero exit value 1
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 1m 2s
+2 actionable tasks: 2 executed

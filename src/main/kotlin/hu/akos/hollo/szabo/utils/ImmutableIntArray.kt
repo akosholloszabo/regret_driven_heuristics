@@ -5,6 +5,6 @@ value class ImmutableIntArray(private val elements: IntArray) {
      val size: Int
         get() = elements.size
 
-     fun get(index: Int): Int = elements[index]
+     operator fun get(index: Int): Int = elements[index]
 
 }

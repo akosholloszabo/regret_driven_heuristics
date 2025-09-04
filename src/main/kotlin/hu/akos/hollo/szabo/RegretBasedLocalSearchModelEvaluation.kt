@@ -30,7 +30,7 @@ fun main() {
 
         val regretData = loadRegrets(
             File(
-                "H:\\by-domain\\work_and_learning_broken\\PhD\\research\\datasets\\2024_10_17_final_result_v1_atsp",
+                "/project/c_gnn_001/code/tsp/atsp_model_train_result/Oct24_20-18-13_HetroGATConcat_trained_ATSP50/trial_0/trial_0",
                 "test_atsp$modelSize"
             )
         )
@@ -61,18 +61,28 @@ fun main() {
                             optimizedCost = bestCost,
                             optimal = regretRecord.optCost
                         )
-                    }.also {
-                        println("Regret record $regretRecordIndex: processing instance took: ${it.duration} gap: ${it.value.optimizedCost / it.value.optimal - 1.0}")
                     }
+                    // .also {
+                    //     println("Regret record $regretRecordIndex: processing instance took: ${it.duration} gap: ${it.value.optimizedCost / it.value.optimal - 1.0}")
+                    // }
                 }
                 .toList()
+
+        val gapStats = costDataPerNoiseLevelAndInstance
+            .map { (it.value.optimizedCost / it.value.optimal - 1.0) * 100 } // percentage
+            .toDoubleArray()
+            .statistics()
+
+        val timeStats = costDataPerNoiseLevelAndInstance
+            .map { it.duration.inWholeMilliseconds.toDouble() / 1000.0 } // seconds
+            .toDoubleArray()
+            .statistics()
+
+        val numInstances = costDataPerNoiseLevelAndInstance.size
+
         println(
-            costDataPerNoiseLevelAndInstance.map { it.value.optimizedCost / it.value.optimal - 1.0 }.toDoubleArray()
-                .statistics()
-        )
-        println(
-            costDataPerNoiseLevelAndInstance.map { it.duration.inWholeMilliseconds.toDouble() }.toDoubleArray()
-                .statistics()
+            "ATSP$modelSize | Instances: $numInstances | iterations: $threeOptIteration | Avg Gap: %.3f %% | Total Time: %.3f s"
+                .format(gapStats.avg, timeStats.sum)
         )
     }
 }
@@ -92,6 +102,7 @@ data class DoubleStatistics(
     val q2: Double,
     val median: Double,
     val standardDeviation: Double,
+    val sum: Double,
 )
 
 fun DoubleArray.statistics(): DoubleStatistics {
@@ -108,7 +119,8 @@ fun DoubleArray.statistics(): DoubleStatistics {
         median = sorted[size / 2],
         q1 = sorted[size / 4],
         q2 = sorted[size * 3 / 4],
-        standardDeviation = standardDeviation
+        standardDeviation = standardDeviation,
+        sum = sum()
     )
 }
 
