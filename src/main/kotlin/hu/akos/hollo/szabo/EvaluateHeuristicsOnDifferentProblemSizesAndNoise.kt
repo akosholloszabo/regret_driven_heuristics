@@ -6,6 +6,7 @@ import hu.akos.hollo.szabo.heuristics.threeOptCycle
 import hu.akos.hollo.szabo.model.CostRecord
 import hu.akos.hollo.szabo.model.loadRegrets
 import hu.akos.hollo.szabo.model.statistics
+import hu.akos.hollo.szabo.model.get
 import java.io.File
 import java.util.*
 import kotlin.math.max
@@ -15,35 +16,46 @@ import kotlin.time.measureTimedValue
 //TODO: Use KMath lib for platform independence
 
 fun main() {
-    sequenceOf(100, 150, 250, 500).forEach { problemSize ->
+    File("output/output.txt").writeText("")
+    sequenceOf(64/*100 , 150, 250, 500*/).forEach { problemSize ->
         (0..100).asSequence().map { it / 100.0 }.forEach { noiseLevel ->
             (0..10).asSequence().forEach { threeOptIteration ->
-                evaluate(problemSize, threeOptIteration, noiseLevel)
+                evaluate( threeOptIteration, problemSize,noiseLevel)
             }
         }
     }
 }
 
 private fun evaluate(threeOptIteration: Int, modelSize: Int, noiseLevel: Double) {
-
+    File("output/output.txt").appendText("NEW RUN: modelSize: $modelSize, noiseLevel: $noiseLevel, threeOptIteration: $threeOptIteration\n")
     val sampleCount = 10
 
     val regretData = loadRegrets(
-        File(
-            "H:\\by-domain\\work_and_learning_broken\\PhD\\research\\datasets\\2024_10_17_final_result_v1_atsp",
-            "test_atsp$modelSize"
+//        File(
+//            "H:\\by-domain\\official\\phd\\research\\datasets\\2024_10_17_final_result_v1_atsp",
+//            "test_atsp$modelSize"
+//        )
+                File(
+            "H:\\by-domain\\official\\phd\\research\\datasets\\2024_10_05_test_model4"
         )
     ).flatMap { regretRecord ->
         (0 until sampleCount).asSequence().map {
             regretRecord.copy(
                 predictedRegretMatrix = Array(regretRecord.expectedRegretMatrix.size) { index ->
-                    regretRecord.expectedRegretMatrix[index]
-                        .map { regretValue->
+                    DoubleArray(regretRecord.expectedRegretMatrix.size) { innerIndex ->
+                        regretRecord.expectedRegretMatrix[innerIndex, index ].let {regretValue->
                             Random().nextGaussian(1.0, noiseLevel)
                                 .let { max(0.0, it) }
                                 .times(regretValue)
                         }
-                        .toDoubleArray()
+                    }
+//                    regretRecord.expectedRegretMatrix[index]
+//                        .map { regretValue->
+//                            Random().nextGaussian(1.0, noiseLevel)
+//                                .let { max(0.0, it) }
+//                                .times(regretValue)
+//                        }
+//                        .toDoubleArray()
                 }
             )
         }
@@ -75,16 +87,16 @@ private fun evaluate(threeOptIteration: Int, modelSize: Int, noiseLevel: Double)
                     optimal = regretRecord.optCost
                 )
             }.also {
-                println("Regret record $regretRecordIndex: processing instance took: ${it.duration} gap: ${it.value.optimizedCost / it.value.optimal - 1.0}")
+                File("output/output.txt").appendText("Regret record $regretRecordIndex: processing instance took: ${it.duration} gap: ${it.value.optimizedCost / it.value.optimal - 1.0} \n")
             }
         }
         .toList()
-    println(
+    File("output/output.txt").appendText(
         costDataPerInstance.map { it.value.optimizedCost / it.value.optimal - 1.0 }.toDoubleArray()
-            .statistics()
+            .statistics().toString().plus("\n")
     )
-    println(
+    File("output/output.txt").appendText(
         costDataPerInstance.map { it.duration.inWholeMilliseconds.toDouble() }.toDoubleArray()
-            .statistics()
+            .statistics().toString().plus("\n")
     )
 }

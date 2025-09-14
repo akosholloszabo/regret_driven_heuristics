@@ -31,7 +31,7 @@ fun main() {
 
         val regretData = loadRegrets(
             File(
-                "H:\\by-domain\\work_and_learning_broken\\PhD\\research\\datasets\\2024_10_17_final_result_v1_atsp",
+                "H:\\by-domain\\official\\phd\\research\\datasets\\2024_10_17_final_result_v1_atsp",
                 "test_atsp$modelSize"
             )
         )
@@ -62,7 +62,7 @@ fun main() {
                         optimal = regretRecord.optCost
                     )
                 }.also {
-                    println("Regret record $regretRecordIndex: processing instance took: ${it.duration} gap: ${it.value.optimizedCost / it.value.optimal - 1.0}")
+                    //println("Regret record $regretRecordIndex: processing instance took: ${it.duration} gap: ${it.value.optimizedCost / it.value.optimal - 1.0}")
                 }
             }
             .toList()

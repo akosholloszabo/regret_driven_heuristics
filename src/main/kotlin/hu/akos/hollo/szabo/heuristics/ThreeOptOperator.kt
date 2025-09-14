@@ -29,8 +29,16 @@ fun costDiffOfThreeOptMove(
     weightMatrix: Array<DoubleArray>,
 ): Double {
     val weightRemoved = (0..<3)
-        .sumOf { weightMatrix[permutation[positions[it] - 1], permutation[positions[it]]] }
+        .sumOf {
+            weightMatrix[
+                if (positions[it] == 0) permutation.size else permutation[positions[it] - 1],
+                if (positions[it] == permutation.size) permutation.size else permutation[positions[it]],
+            ]
+        }
     val weightAdded = (0..<3)
-        .sumOf { weightMatrix[permutation[positions[it] - 1], permutation[positions[(it + 1) % 3]]] }
+        .sumOf { weightMatrix[
+            if (positions[it] == 0) permutation.size else permutation[positions[it] - 1],
+            if (positions[(it + 1) % 3] == permutation.size) permutation.size else permutation[positions[(it + 1) % 3]],
+        ] }
     return weightAdded - weightRemoved
 }

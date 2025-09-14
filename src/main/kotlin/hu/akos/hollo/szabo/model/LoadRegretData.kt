@@ -5,6 +5,7 @@ import java.io.File
 
 
 fun loadRegrets(sourceFolder: File): List<RegretData> {
+    println(sourceFolder.toString())
     return sourceFolder.listFiles().asSequence()
         .map { file ->
 

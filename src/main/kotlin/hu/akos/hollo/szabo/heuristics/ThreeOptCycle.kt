@@ -4,6 +4,7 @@ import hu.akos.hollo.szabo.model.GraphEdge
 import hu.akos.hollo.szabo.model.RegretData
 import hu.akos.hollo.szabo.model.dimensions
 import hu.akos.hollo.szabo.model.get
+import kotlin.math.abs
 
 
 fun threeOptCycle(
@@ -89,8 +90,15 @@ fun threeOptCycle(
                 if (costDiff <= 0) {
                     applyThreeOptMove(permutation, selectedPositions)
                     bestCost += costDiff
-                    if (bestCost != calcCostOfTspSolution(permutation, regretRecord.distanceMatrix)) {
-                        throw Exception("Values should match!")
+                    if (abs(bestCost - calcCostOfTspSolution(permutation, regretRecord.distanceMatrix)) > 0.0001) {
+                        throw Exception(
+                            "Values should match! $costDiff $bestCost != ${
+                                calcCostOfTspSolution(
+                                    permutation,
+                                    regretRecord.distanceMatrix
+                                )
+                            }"
+                        )
                     }
                 }
             }
