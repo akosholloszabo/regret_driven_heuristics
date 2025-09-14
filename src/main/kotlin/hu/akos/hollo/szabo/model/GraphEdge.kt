@@ -1,4 +1,4 @@
-package hu.akos.hollo.szabo.utils
+package hu.akos.hollo.szabo.model
 
 data class GraphEdge<E>(
     val sourceNodeIndex: Int,

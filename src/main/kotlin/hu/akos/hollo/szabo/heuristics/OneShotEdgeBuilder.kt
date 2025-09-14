@@ -1,25 +1,15 @@
-package hu.akos.hollo.szabo
+package hu.akos.hollo.szabo.heuristics
 
-//PROTECTED
+import hu.akos.hollo.szabo.model.GraphEdge
+import hu.akos.hollo.szabo.model.dimensions
+import hu.akos.hollo.szabo.model.mapEachEntryIndexed
 
 
-import hu.akos.hollo.szabo.utils.GraphEdge
-import hu.akos.hollo.szabo.utils.Permutation
-import hu.akos.hollo.szabo.utils.dimensions
-import hu.akos.hollo.szabo.utils.mapEachEntryIndexed
-import hu.akos.hollo.szabo.utils.x
-
-//1. select best edge from each source
-//2. order selected edges by weight
-//3. build hamiltonian cycle skipping conflicting edges
-//4. exclude conflicting edges
-//repeat
-
-fun oneShotEdgeBuilder(regret: Array<DoubleArray>): Permutation {
-    val sequentialRepresentation = IntArray(regret.dimensions.x) { Int.MIN_VALUE }
-    val inverseSequentialRepresentation = IntArray(regret.dimensions.x) { Int.MIN_VALUE }
-    val sequencesFromSource = IntArray(regret.dimensions.x) { Int.MIN_VALUE }
-    val sequencesToTarget = IntArray(regret.dimensions.x) { Int.MIN_VALUE }
+fun oneShotEdgeBuilder(regret: Array<DoubleArray>): IntArray {
+    val sequentialRepresentation = IntArray(regret.dimensions.first) { Int.MIN_VALUE }
+    val inverseSequentialRepresentation = IntArray(regret.dimensions.first) { Int.MIN_VALUE }
+    val sequencesFromSource = IntArray(regret.dimensions.first) { Int.MIN_VALUE }
+    val sequencesToTarget = IntArray(regret.dimensions.first) { Int.MIN_VALUE }
     var selectedEdges = 0
 
     var graphEdges =
@@ -38,7 +28,7 @@ fun oneShotEdgeBuilder(regret: Array<DoubleArray>): Permutation {
             }
             .toList()
 
-    while (selectedEdges != regret.dimensions.x - 1) {
+    while (selectedEdges != regret.dimensions.first - 1) {
 
         graphEdges.asSequence()
             .map {
@@ -105,14 +95,11 @@ fun oneShotEdgeBuilder(regret: Array<DoubleArray>): Permutation {
 }
 
 
-private fun toPermutation(bestSequentialRepresentation: IntArray): Permutation {
-    val result = Permutation(bestSequentialRepresentation.size - 1)
+private fun toPermutation(bestSequentialRepresentation: IntArray): IntArray {
+    val result = IntArray(bestSequentialRepresentation.size - 1) { -1 }
     result[0] = bestSequentialRepresentation.last()
     (1..<result.size).forEach {
         result[it] = bestSequentialRepresentation[result[it - 1]]
-    }
-    if (!result.isFormatCorrect()) {
-        throw Exception("permutation is malformed")
     }
     return result
 }
