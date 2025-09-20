@@ -1,0 +1,174 @@
+Starting a Gradle Daemon, 2 incompatible and 5 stopped Daemons could not be reused, use --status for details
+> Task :checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :processResources NO-SOURCE
+> Task :compileKotlin
+> Task :compileJava NO-SOURCE
+> Task :classes UP-TO-DATE
+
+> Task :run
+ATSP100 | iterations: 9 | Agg: concat | Rel: pp | Instances: 30 | Avg Gap: 3.950 % | Total Time: 5.730 s
+ATSP100 | iterations: 6 | Agg: concat | Rel: pp | Instances: 30 | Avg Gap: 4.338 % | Total Time: 3.688 s
+ATSP100 | iterations: 3 | Agg: concat | Rel: pp | Instances: 30 | Avg Gap: 6.122 % | Total Time: 1.841 s
+ATSP100 | iterations: 0 | Agg: concat | Rel: pp | Instances: 30 | Avg Gap: 23.925 % | Total Time: 0.001 s
+ATSP150 | iterations: 2 | Agg: concat | Rel: pp | Instances: 30 | Avg Gap: 8.878 % | Total Time: 4.236 s
+ATSP150 | iterations: 1 | Agg: concat | Rel: pp | Instances: 30 | Avg Gap: 11.872 % | Total Time: 2.193 s
+ATSP150 | iterations: 0 | Agg: concat | Rel: pp | Instances: 30 | Avg Gap: 25.117 % | Total Time: 0.030 s
+ATSP250 | iterations: 1 | Agg: concat | Rel: pp | Instances: 30 | Avg Gap: 12.914 % | Total Time: 10.162 s
+ATSP250 | iterations: 0 | Agg: concat | Rel: pp | Instances: 30 | Avg Gap: 24.032 % | Total Time: 0.121 s
+ATSP500 | iterations: 0 | Agg: concat | Rel: pp | Instances: 30 | Avg Gap: 23.971 % | Total Time: 0.556 s
+ATSP500 | iterations: 1 | Agg: concat | Rel: pp | Instances: 30 | Avg Gap: 20.860 % | Total Time: 6.812 s
+ATSP100 | iterations: 9 | Agg: concat | Rel: pp+ss | Instances: 30 | Avg Gap: 3.540 % | Total Time: 5.385 s
+ATSP100 | iterations: 6 | Agg: concat | Rel: pp+ss | Instances: 30 | Avg Gap: 3.852 % | Total Time: 3.458 s
+ATSP100 | iterations: 3 | Agg: concat | Rel: pp+ss | Instances: 30 | Avg Gap: 4.730 % | Total Time: 1.785 s
+ATSP100 | iterations: 0 | Agg: concat | Rel: pp+ss | Instances: 30 | Avg Gap: 12.467 % | Total Time: 0.000 s
+ATSP150 | iterations: 2 | Agg: concat | Rel: pp+ss | Instances: 30 | Avg Gap: 6.625 % | Total Time: 4.177 s
+ATSP150 | iterations: 1 | Agg: concat | Rel: pp+ss | Instances: 30 | Avg Gap: 7.966 % | Total Time: 2.026 s
+ATSP150 | iterations: 0 | Agg: concat | Rel: pp+ss | Instances: 30 | Avg Gap: 13.687 % | Total Time: 0.030 s
+ATSP250 | iterations: 1 | Agg: concat | Rel: pp+ss | Instances: 30 | Avg Gap: 9.010 % | Total Time: 10.473 s
+ATSP250 | iterations: 0 | Agg: concat | Rel: pp+ss | Instances: 30 | Avg Gap: 13.683 % | Total Time: 0.106 s
+ATSP500 | iterations: 0 | Agg: concat | Rel: pp+ss | Instances: 30 | Avg Gap: 14.424 % | Total Time: 0.421 s
+ATSP500 | iterations: 1 | Agg: concat | Rel: pp+ss | Instances: 30 | Avg Gap: 13.331 % | Total Time: 6.343 s
+ATSP100 | iterations: 9 | Agg: concat | Rel: pp+ss+st | Instances: 30 | Avg Gap: 2.738 % | Total Time: 5.254 s
+ATSP100 | iterations: 6 | Agg: concat | Rel: pp+ss+st | Instances: 30 | Avg Gap: 2.823 % | Total Time: 3.534 s
+ATSP100 | iterations: 3 | Agg: concat | Rel: pp+ss+st | Instances: 30 | Avg Gap: 3.642 % | Total Time: 1.809 s
+ATSP100 | iterations: 0 | Agg: concat | Rel: pp+ss+st | Instances: 30 | Avg Gap: 9.758 % | Total Time: 0.000 s
+ATSP150 | iterations: 2 | Agg: concat | Rel: pp+ss+st | Instances: 30 | Avg Gap: 5.811 % | Total Time: 4.098 s
+ATSP150 | iterations: 1 | Agg: concat | Rel: pp+ss+st | Instances: 30 | Avg Gap: 7.164 % | Total Time: 2.141 s
+ATSP150 | iterations: 0 | Agg: concat | Rel: pp+ss+st | Instances: 30 | Avg Gap: 12.617 % | Total Time: 0.030 s
+ATSP250 | iterations: 1 | Agg: concat | Rel: pp+ss+st | Instances: 30 | Avg Gap: 9.265 % | Total Time: 9.967 s
+ATSP250 | iterations: 0 | Agg: concat | Rel: pp+ss+st | Instances: 30 | Avg Gap: 16.218 % | Total Time: 0.094 s
+ATSP500 | iterations: 0 | Agg: concat | Rel: pp+ss+st | Instances: 30 | Avg Gap: 24.525 % | Total Time: 0.564 s
+ATSP500 | iterations: 1 | Agg: concat | Rel: pp+ss+st | Instances: 30 | Avg Gap: 20.649 % | Total Time: 6.458 s
+ATSP100 | iterations: 9 | Agg: concat | Rel: pp+ss+st+tt | Instances: 30 | Avg Gap: 2.457 % | Total Time: 5.258 s
+ATSP100 | iterations: 6 | Agg: concat | Rel: pp+ss+st+tt | Instances: 30 | Avg Gap: 2.547 % | Total Time: 3.612 s
+ATSP100 | iterations: 3 | Agg: concat | Rel: pp+ss+st+tt | Instances: 30 | Avg Gap: 2.839 % | Total Time: 1.702 s
+ATSP100 | iterations: 0 | Agg: concat | Rel: pp+ss+st+tt | Instances: 30 | Avg Gap: 7.808 % | Total Time: 0.000 s
+ATSP150 | iterations: 2 | Agg: concat | Rel: pp+ss+st+tt | Instances: 30 | Avg Gap: 4.142 % | Total Time: 4.111 s
+ATSP150 | iterations: 1 | Agg: concat | Rel: pp+ss+st+tt | Instances: 30 | Avg Gap: 4.883 % | Total Time: 2.152 s
+ATSP150 | iterations: 0 | Agg: concat | Rel: pp+ss+st+tt | Instances: 30 | Avg Gap: 7.995 % | Total Time: 0.030 s
+ATSP250 | iterations: 1 | Agg: concat | Rel: pp+ss+st+tt | Instances: 30 | Avg Gap: 5.649 % | Total Time: 10.083 s
+ATSP250 | iterations: 0 | Agg: concat | Rel: pp+ss+st+tt | Instances: 30 | Avg Gap: 8.343 % | Total Time: 0.092 s
+ATSP500 | iterations: 0 | Agg: concat | Rel: pp+ss+st+tt | Instances: 30 | Avg Gap: 8.652 % | Total Time: 0.448 s
+ATSP500 | iterations: 1 | Agg: concat | Rel: pp+ss+st+tt | Instances: 30 | Avg Gap: 7.886 % | Total Time: 6.451 s
+ATSP100 | iterations: 9 | Agg: concat | Rel: pp+ss+tt | Instances: 30 | Avg Gap: 2.742 % | Total Time: 5.292 s
+ATSP100 | iterations: 6 | Agg: concat | Rel: pp+ss+tt | Instances: 30 | Avg Gap: 2.850 % | Total Time: 3.531 s
+ATSP100 | iterations: 3 | Agg: concat | Rel: pp+ss+tt | Instances: 30 | Avg Gap: 3.358 % | Total Time: 1.707 s
+ATSP100 | iterations: 0 | Agg: concat | Rel: pp+ss+tt | Instances: 30 | Avg Gap: 10.580 % | Total Time: 0.000 s
+ATSP150 | iterations: 2 | Agg: concat | Rel: pp+ss+tt | Instances: 30 | Avg Gap: 4.949 % | Total Time: 4.225 s
+ATSP150 | iterations: 1 | Agg: concat | Rel: pp+ss+tt | Instances: 30 | Avg Gap: 6.193 % | Total Time: 2.146 s
+ATSP150 | iterations: 0 | Agg: concat | Rel: pp+ss+tt | Instances: 30 | Avg Gap: 11.940 % | Total Time: 0.030 s
+ATSP250 | iterations: 1 | Agg: concat | Rel: pp+ss+tt | Instances: 30 | Avg Gap: 7.474 % | Total Time: 10.383 s
+ATSP250 | iterations: 0 | Agg: concat | Rel: pp+ss+tt | Instances: 30 | Avg Gap: 13.015 % | Total Time: 0.118 s
+ATSP500 | iterations: 0 | Agg: concat | Rel: pp+ss+tt | Instances: 30 | Avg Gap: 15.714 % | Total Time: 0.615 s
+ATSP500 | iterations: 1 | Agg: concat | Rel: pp+ss+tt | Instances: 30 | Avg Gap: 13.622 % | Total Time: 6.631 s
+ATSP100 | iterations: 9 | Agg: concat | Rel: pp+st | Instances: 30 | Avg Gap: 3.646 % | Total Time: 5.276 s
+ATSP100 | iterations: 6 | Agg: concat | Rel: pp+st | Instances: 30 | Avg Gap: 3.854 % | Total Time: 3.551 s
+ATSP100 | iterations: 3 | Agg: concat | Rel: pp+st | Instances: 30 | Avg Gap: 4.855 % | Total Time: 1.788 s
+ATSP100 | iterations: 0 | Agg: concat | Rel: pp+st | Instances: 30 | Avg Gap: 16.690 % | Total Time: 0.000 s
+ATSP150 | iterations: 2 | Agg: concat | Rel: pp+st | Instances: 30 | Avg Gap: 9.170 % | Total Time: 4.244 s
+ATSP150 | iterations: 1 | Agg: concat | Rel: pp+st | Instances: 30 | Avg Gap: 12.524 % | Total Time: 2.164 s
+ATSP150 | iterations: 0 | Agg: concat | Rel: pp+st | Instances: 30 | Avg Gap: 26.277 % | Total Time: 0.030 s
+ATSP250 | iterations: 1 | Agg: concat | Rel: pp+st | Instances: 30 | Avg Gap: 15.465 % | Total Time: 10.187 s
+ATSP250 | iterations: 0 | Agg: concat | Rel: pp+st | Instances: 30 | Avg Gap: 38.981 % | Total Time: 0.132 s
+ATSP500 | iterations: 0 | Agg: concat | Rel: pp+st | Instances: 30 | Avg Gap: 82.796 % | Total Time: 0.862 s
+ATSP500 | iterations: 1 | Agg: concat | Rel: pp+st | Instances: 30 | Avg Gap: 49.516 % | Total Time: 7.097 s
+ATSP100 | iterations: 9 | Agg: concat | Rel: pp+st+tt | Instances: 30 | Avg Gap: 3.254 % | Total Time: 5.259 s
+ATSP100 | iterations: 6 | Agg: concat | Rel: pp+st+tt | Instances: 30 | Avg Gap: 3.366 % | Total Time: 3.457 s
+ATSP100 | iterations: 3 | Agg: concat | Rel: pp+st+tt | Instances: 30 | Avg Gap: 4.744 % | Total Time: 1.778 s
+ATSP100 | iterations: 0 | Agg: concat | Rel: pp+st+tt | Instances: 30 | Avg Gap: 15.569 % | Total Time: 0.000 s
+ATSP150 | iterations: 2 | Agg: concat | Rel: pp+st+tt | Instances: 30 | Avg Gap: 8.329 % | Total Time: 4.288 s
+ATSP150 | iterations: 1 | Agg: concat | Rel: pp+st+tt | Instances: 30 | Avg Gap: 11.087 % | Total Time: 2.083 s
+ATSP150 | iterations: 0 | Agg: concat | Rel: pp+st+tt | Instances: 30 | Avg Gap: 27.254 % | Total Time: 0.033 s
+ATSP250 | iterations: 1 | Agg: concat | Rel: pp+st+tt | Instances: 30 | Avg Gap: 11.258 % | Total Time: 10.244 s
+ATSP250 | iterations: 0 | Agg: concat | Rel: pp+st+tt | Instances: 30 | Avg Gap: 22.510 % | Total Time: 0.112 s
+ATSP500 | iterations: 0 | Agg: concat | Rel: pp+st+tt | Instances: 30 | Avg Gap: 28.031 % | Total Time: 0.594 s
+ATSP500 | iterations: 1 | Agg: concat | Rel: pp+st+tt | Instances: 30 | Avg Gap: 22.925 % | Total Time: 6.717 s
+ATSP100 | iterations: 9 | Agg: concat | Rel: pp+tt | Instances: 30 | Avg Gap: 3.509 % | Total Time: 5.341 s
+ATSP100 | iterations: 6 | Agg: concat | Rel: pp+tt | Instances: 30 | Avg Gap: 3.750 % | Total Time: 3.693 s
+ATSP100 | iterations: 3 | Agg: concat | Rel: pp+tt | Instances: 30 | Avg Gap: 4.626 % | Total Time: 1.813 s
+ATSP100 | iterations: 0 | Agg: concat | Rel: pp+tt | Instances: 30 | Avg Gap: 14.210 % | Total Time: 0.000 s
+ATSP150 | iterations: 2 | Agg: concat | Rel: pp+tt | Instances: 30 | Avg Gap: 6.426 % | Total Time: 4.134 s
+ATSP150 | iterations: 1 | Agg: concat | Rel: pp+tt | Instances: 30 | Avg Gap: 8.403 % | Total Time: 2.096 s
+ATSP150 | iterations: 0 | Agg: concat | Rel: pp+tt | Instances: 30 | Avg Gap: 13.725 % | Total Time: 0.030 s
+ATSP250 | iterations: 1 | Agg: concat | Rel: pp+tt | Instances: 30 | Avg Gap: 9.069 % | Total Time: 10.189 s
+ATSP250 | iterations: 0 | Agg: concat | Rel: pp+tt | Instances: 30 | Avg Gap: 14.057 % | Total Time: 0.090 s
+ATSP500 | iterations: 0 | Agg: concat | Rel: pp+tt | Instances: 30 | Avg Gap: 14.966 % | Total Time: 0.483 s
+ATSP500 | iterations: 1 | Agg: concat | Rel: pp+tt | Instances: 30 | Avg Gap: 13.681 % | Total Time: 6.548 s
+ATSP100 | iterations: 9 | Agg: concat | Rel: ss | Instances: 30 | Avg Gap: 3.854 % | Total Time: 5.212 s
+ATSP100 | iterations: 6 | Agg: concat | Rel: ss | Instances: 30 | Avg Gap: 4.232 % | Total Time: 3.627 s
+ATSP100 | iterations: 3 | Agg: concat | Rel: ss | Instances: 30 | Avg Gap: 5.320 % | Total Time: 1.728 s
+ATSP100 | iterations: 0 | Agg: concat | Rel: ss | Instances: 30 | Avg Gap: 18.988 % | Total Time: 0.000 s
+ATSP150 | iterations: 2 | Agg: concat | Rel: ss | Instances: 30 | Avg Gap: 7.891 % | Total Time: 4.327 s
+ATSP150 | iterations: 1 | Agg: concat | Rel: ss | Instances: 30 | Avg Gap: 10.419 % | Total Time: 2.061 s
+ATSP150 | iterations: 0 | Agg: concat | Rel: ss | Instances: 30 | Avg Gap: 19.592 % | Total Time: 0.030 s
+ATSP250 | iterations: 1 | Agg: concat | Rel: ss | Instances: 30 | Avg Gap: 10.700 % | Total Time: 10.070 s
+ATSP250 | iterations: 0 | Agg: concat | Rel: ss | Instances: 30 | Avg Gap: 18.783 % | Total Time: 0.119 s
+ATSP500 | iterations: 0 | Agg: concat | Rel: ss | Instances: 30 | Avg Gap: 18.298 % | Total Time: 0.542 s
+ATSP500 | iterations: 1 | Agg: concat | Rel: ss | Instances: 30 | Avg Gap: 16.466 % | Total Time: 6.707 s
+ATSP100 | iterations: 9 | Agg: concat | Rel: ss+st | Instances: 30 | Avg Gap: 3.016 % | Total Time: 5.313 s
+ATSP100 | iterations: 6 | Agg: concat | Rel: ss+st | Instances: 30 | Avg Gap: 3.264 % | Total Time: 3.468 s
+ATSP100 | iterations: 3 | Agg: concat | Rel: ss+st | Instances: 30 | Avg Gap: 3.944 % | Total Time: 1.695 s
+ATSP100 | iterations: 0 | Agg: concat | Rel: ss+st | Instances: 30 | Avg Gap: 10.401 % | Total Time: 0.000 s
+ATSP150 | iterations: 2 | Agg: concat | Rel: ss+st | Instances: 30 | Avg Gap: 5.852 % | Total Time: 4.233 s
+ATSP150 | iterations: 1 | Agg: concat | Rel: ss+st | Instances: 30 | Avg Gap: 7.069 % | Total Time: 2.020 s
+ATSP150 | iterations: 0 | Agg: concat | Rel: ss+st | Instances: 30 | Avg Gap: 11.817 % | Total Time: 0.030 s
+ATSP250 | iterations: 1 | Agg: concat | Rel: ss+st | Instances: 30 | Avg Gap: 8.064 % | Total Time: 10.130 s
+ATSP250 | iterations: 0 | Agg: concat | Rel: ss+st | Instances: 30 | Avg Gap: 12.289 % | Total Time: 0.091 s
+ATSP500 | iterations: 0 | Agg: concat | Rel: ss+st | Instances: 30 | Avg Gap: 13.229 % | Total Time: 0.493 s
+ATSP500 | iterations: 1 | Agg: concat | Rel: ss+st | Instances: 30 | Avg Gap: 12.177 % | Total Time: 6.453 s
+ATSP100 | iterations: 9 | Agg: concat | Rel: ss+st+tt | Instances: 30 | Avg Gap: 2.788 % | Total Time: 5.336 s
+ATSP100 | iterations: 6 | Agg: concat | Rel: ss+st+tt | Instances: 30 | Avg Gap: 3.099 % | Total Time: 3.550 s
+ATSP100 | iterations: 3 | Agg: concat | Rel: ss+st+tt | Instances: 30 | Avg Gap: 3.615 % | Total Time: 1.768 s
+ATSP100 | iterations: 0 | Agg: concat | Rel: ss+st+tt | Instances: 30 | Avg Gap: 10.177 % | Total Time: 0.000 s
+ATSP150 | iterations: 2 | Agg: concat | Rel: ss+st+tt | Instances: 30 | Avg Gap: 4.980 % | Total Time: 4.138 s
+ATSP150 | iterations: 1 | Agg: concat | Rel: ss+st+tt | Instances: 30 | Avg Gap: 6.336 % | Total Time: 2.072 s
+ATSP150 | iterations: 0 | Agg: concat | Rel: ss+st+tt | Instances: 30 | Avg Gap: 11.098 % | Total Time: 0.030 s
+ATSP250 | iterations: 1 | Agg: concat | Rel: ss+st+tt | Instances: 30 | Avg Gap: 7.244 % | Total Time: 10.068 s
+ATSP250 | iterations: 0 | Agg: concat | Rel: ss+st+tt | Instances: 30 | Avg Gap: 11.619 % | Total Time: 0.090 s
+ATSP500 | iterations: 0 | Agg: concat | Rel: ss+st+tt | Instances: 30 | Avg Gap: 12.973 % | Total Time: 0.467 s
+ATSP500 | iterations: 1 | Agg: concat | Rel: ss+st+tt | Instances: 30 | Avg Gap: 11.423 % | Total Time: 6.530 s
+ATSP100 | iterations: 9 | Agg: concat | Rel: ss+tt | Instances: 30 | Avg Gap: 2.311 % | Total Time: 5.183 s
+ATSP100 | iterations: 6 | Agg: concat | Rel: ss+tt | Instances: 30 | Avg Gap: 2.443 % | Total Time: 3.565 s
+ATSP100 | iterations: 3 | Agg: concat | Rel: ss+tt | Instances: 30 | Avg Gap: 2.874 % | Total Time: 1.733 s
+ATSP100 | iterations: 0 | Agg: concat | Rel: ss+tt | Instances: 30 | Avg Gap: 9.026 % | Total Time: 0.000 s
+ATSP150 | iterations: 2 | Agg: concat | Rel: ss+tt | Instances: 30 | Avg Gap: 4.194 % | Total Time: 4.222 s
+ATSP150 | iterations: 1 | Agg: concat | Rel: ss+tt | Instances: 30 | Avg Gap: 5.177 % | Total Time: 2.019 s
+ATSP150 | iterations: 0 | Agg: concat | Rel: ss+tt | Instances: 30 | Avg Gap: 9.667 % | Total Time: 0.030 s
+ATSP250 | iterations: 1 | Agg: concat | Rel: ss+tt | Instances: 30 | Avg Gap: 5.895 % | Total Time: 10.024 s
+ATSP250 | iterations: 0 | Agg: concat | Rel: ss+tt | Instances: 30 | Avg Gap: 9.414 % | Total Time: 0.090 s
+ATSP500 | iterations: 0 | Agg: concat | Rel: ss+tt | Instances: 30 | Avg Gap: 10.595 % | Total Time: 0.431 s
+ATSP500 | iterations: 1 | Agg: concat | Rel: ss+tt | Instances: 30 | Avg Gap: 9.530 % | Total Time: 6.473 s
+ATSP100 | iterations: 9 | Agg: concat | Rel: st+tt | Instances: 30 | Avg Gap: 3.360 % | Total Time: 5.335 s
+ATSP100 | iterations: 6 | Agg: concat | Rel: st+tt | Instances: 30 | Avg Gap: 3.601 % | Total Time: 3.479 s
+ATSP100 | iterations: 3 | Agg: concat | Rel: st+tt | Instances: 30 | Avg Gap: 4.440 % | Total Time: 1.736 s
+ATSP100 | iterations: 0 | Agg: concat | Rel: st+tt | Instances: 30 | Avg Gap: 14.260 % | Total Time: 0.001 s
+ATSP150 | iterations: 2 | Agg: concat | Rel: st+tt | Instances: 30 | Avg Gap: 6.595 % | Total Time: 4.212 s
+ATSP150 | iterations: 1 | Agg: concat | Rel: st+tt | Instances: 30 | Avg Gap: 8.471 % | Total Time: 2.052 s
+ATSP150 | iterations: 0 | Agg: concat | Rel: st+tt | Instances: 30 | Avg Gap: 17.997 % | Total Time: 0.030 s
+ATSP250 | iterations: 1 | Agg: concat | Rel: st+tt | Instances: 30 | Avg Gap: 8.992 % | Total Time: 10.130 s
+ATSP250 | iterations: 0 | Agg: concat | Rel: st+tt | Instances: 30 | Avg Gap: 17.042 % | Total Time: 0.093 s
+ATSP500 | iterations: 0 | Agg: concat | Rel: st+tt | Instances: 30 | Avg Gap: 22.950 % | Total Time: 0.478 s
+ATSP500 | iterations: 1 | Agg: concat | Rel: st+tt | Instances: 30 | Avg Gap: 18.779 % | Total Time: 6.659 s
+ATSP100 | iterations: 9 | Agg: concat | Rel: tt | Instances: 30 | Avg Gap: 4.183 % | Total Time: 5.369 s
+ATSP100 | iterations: 6 | Agg: concat | Rel: tt | Instances: 30 | Avg Gap: 4.485 % | Total Time: 3.592 s
+ATSP100 | iterations: 3 | Agg: concat | Rel: tt | Instances: 30 | Avg Gap: 5.663 % | Total Time: 1.820 s
+ATSP100 | iterations: 0 | Agg: concat | Rel: tt | Instances: 30 | Avg Gap: 18.105 % | Total Time: 0.000 s
+ATSP150 | iterations: 2 | Agg: concat | Rel: tt | Instances: 30 | Avg Gap: 7.701 % | Total Time: 4.228 s
+ATSP150 | iterations: 1 | Agg: concat | Rel: tt | Instances: 30 | Avg Gap: 9.818 % | Total Time: 2.067 s
+ATSP150 | iterations: 0 | Agg: concat | Rel: tt | Instances: 30 | Avg Gap: 17.978 % | Total Time: 0.030 s
+ATSP250 | iterations: 1 | Agg: concat | Rel: tt | Instances: 30 | Avg Gap: 10.514 % | Total Time: 10.090 s
+ATSP250 | iterations: 0 | Agg: concat | Rel: tt | Instances: 30 | Avg Gap: 17.906 % | Total Time: 0.092 s
+ATSP500 | iterations: 0 | Agg: concat | Rel: tt | Instances: 30 | Avg Gap: 18.106 % | Total Time: 0.431 s
+ATSP500 | iterations: 1 | Agg: concat | Rel: tt | Instances: 30 | Avg Gap: 16.129 % | Total Time: 6.376 s
+
+[Incubating] Problems report is available at: file:///project/c_gnn_001/code/tsp/regret_driven_heuristics/build/reports/problems/problems-report.html
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 10.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/9.0.0/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 11m 1s
+2 actionable tasks: 2 executed
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.0.0/userguide/configuration_cache_enabling.html

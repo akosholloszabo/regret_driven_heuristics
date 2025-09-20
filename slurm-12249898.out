@@ -1,0 +1,63 @@
+Starting a Gradle Daemon, 2 incompatible and 1 stopped Daemons could not be reused, use --status for details
+> Task :checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :processResources NO-SOURCE
+> Task :compileKotlin
+> Task :compileJava NO-SOURCE
+> Task :classes UP-TO-DATE
+
+> Task :run
+/project/c_gnn_001/code/tsp/atsp_gnn/jobs/search/12201357/best_model_rel_pp_st_attn/trial_0 | ATSP100 | iterations: 9 | Agg: attn | Rel: pp+st | Instances: 30 | Avg Gap: 4.222 % | Total Time: 5.946 s
+/project/c_gnn_001/code/tsp/atsp_gnn/jobs/search/12201357/best_model_rel_pp_st_attn/trial_0 | ATSP100 | iterations: 6 | Agg: attn | Rel: pp+st | Instances: 30 | Avg Gap: 4.805 % | Total Time: 3.768 s
+/project/c_gnn_001/code/tsp/atsp_gnn/jobs/search/12201357/best_model_rel_pp_st_attn/trial_0 | ATSP100 | iterations: 3 | Agg: attn | Rel: pp+st | Instances: 30 | Avg Gap: 6.636 % | Total Time: 1.891 s
+/project/c_gnn_001/code/tsp/atsp_gnn/jobs/search/12201357/best_model_rel_pp_st_attn/trial_0 | ATSP100 | iterations: 0 | Agg: attn | Rel: pp+st | Instances: 30 | Avg Gap: 23.969 % | Total Time: 0.002 s
+/project/c_gnn_001/code/tsp/atsp_gnn/jobs/search/12201357/best_model_rel_pp_st_attn/trial_0 | ATSP150 | iterations: 2 | Agg: attn | Rel: pp+st | Instances: 30 | Avg Gap: 9.111 % | Total Time: 4.617 s
+/project/c_gnn_001/code/tsp/atsp_gnn/jobs/search/12201357/best_model_rel_pp_st_attn/trial_0 | ATSP150 | iterations: 1 | Agg: attn | Rel: pp+st | Instances: 30 | Avg Gap: 12.074 % | Total Time: 2.290 s
+/project/c_gnn_001/code/tsp/atsp_gnn/jobs/search/12201357/best_model_rel_pp_st_attn/trial_0 | ATSP150 | iterations: 0 | Agg: attn | Rel: pp+st | Instances: 30 | Avg Gap: 27.181 % | Total Time: 0.030 s
+/project/c_gnn_001/code/tsp/atsp_gnn/jobs/search/12201357/best_model_rel_pp_st_attn/trial_0 | ATSP250 | iterations: 1 | Agg: attn | Rel: pp+st | Instances: 30 | Avg Gap: 13.665 % | Total Time: 11.029 s
+/project/c_gnn_001/code/tsp/atsp_gnn/jobs/search/12201357/best_model_rel_pp_st_attn/trial_0 | ATSP250 | iterations: 0 | Agg: attn | Rel: pp+st | Instances: 30 | Avg Gap: 26.404 % | Total Time: 0.123 s
+/project/c_gnn_001/code/tsp/atsp_gnn/jobs/search/12201357/best_model_rel_pp_st_attn/trial_0 | ATSP500 | iterations: 0 | Agg: attn | Rel: pp+st | Instances: 30 | Avg Gap: 25.832 % | Total Time: 0.637 s
+/project/c_gnn_001/code/tsp/atsp_gnn/jobs/search/12201357/best_model_rel_pp_st_attn/trial_0 | ATSP500 | iterations: 1 | Agg: attn | Rel: pp+st | Instances: 30 | Avg Gap: 22.619 % | Total Time: 7.382 s
+/project/c_gnn_001/code/tsp/atsp_gnn/jobs/search/12201358/best_model_rel_st_concat/trial_0 | ATSP100 | iterations: 9 | Agg: concat | Rel: st | Instances: 30 | Avg Gap: 3.339 % | Total Time: 5.849 s
+/project/c_gnn_001/code/tsp/atsp_gnn/jobs/search/12201358/best_model_rel_st_concat/trial_0 | ATSP100 | iterations: 6 | Agg: concat | Rel: st | Instances: 30 | Avg Gap: 3.802 % | Total Time: 3.896 s
+/project/c_gnn_001/code/tsp/atsp_gnn/jobs/search/12201358/best_model_rel_st_concat/trial_0 | ATSP100 | iterations: 3 | Agg: concat | Rel: st | Instances: 30 | Avg Gap: 4.728 % | Total Time: 1.961 s
+/project/c_gnn_001/code/tsp/atsp_gnn/jobs/search/12201358/best_model_rel_st_concat/trial_0 | ATSP100 | iterations: 0 | Agg: concat | Rel: st | Instances: 30 | Avg Gap: 15.658 % | Total Time: 0.001 s
+/project/c_gnn_001/code/tsp/atsp_gnn/jobs/search/12201358/best_model_rel_st_concat/trial_0 | ATSP150 | iterations: 2 | Agg: concat | Rel: st | Instances: 30 | Avg Gap: 6.902 % | Total Time: 4.662 s
+/project/c_gnn_001/code/tsp/atsp_gnn/jobs/search/12201358/best_model_rel_st_concat/trial_0 | ATSP150 | iterations: 1 | Agg: concat | Rel: st | Instances: 30 | Avg Gap: 8.875 % | Total Time: 2.327 s
+/project/c_gnn_001/code/tsp/atsp_gnn/jobs/search/12201358/best_model_rel_st_concat/trial_0 | ATSP150 | iterations: 0 | Agg: concat | Rel: st | Instances: 30 | Avg Gap: 15.351 % | Total Time: 0.030 s
+/project/c_gnn_001/code/tsp/atsp_gnn/jobs/search/12201358/best_model_rel_st_concat/trial_0 | ATSP250 | iterations: 1 | Agg: concat | Rel: st | Instances: 30 | Avg Gap: 9.986 % | Total Time: 11.145 s
+/project/c_gnn_001/code/tsp/atsp_gnn/jobs/search/12201358/best_model_rel_st_concat/trial_0 | ATSP250 | iterations: 0 | Agg: concat | Rel: st | Instances: 30 | Avg Gap: 16.387 % | Total Time: 0.118 s
+/project/c_gnn_001/code/tsp/atsp_gnn/jobs/search/12201358/best_model_rel_st_concat/trial_0 | ATSP500 | iterations: 0 | Agg: concat | Rel: st | Instances: 30 | Avg Gap: 17.397 % | Total Time: 0.531 s
+/project/c_gnn_001/code/tsp/atsp_gnn/jobs/search/12201358/best_model_rel_st_concat/trial_0 | ATSP500 | iterations: 1 | Agg: concat | Rel: st | Instances: 30 | Avg Gap: 15.354 % | Total Time: 7.221 s
+/project/c_gnn_001/code/tsp/atsp_gnn/jobs/search/12201359/best_model_rel_ss_tt_sum/trial_0 | ATSP100 | iterations: 9 | Agg: sum | Rel: ss+tt | Instances: 30 | Avg Gap: 2.605 % | Total Time: 5.828 s
+/project/c_gnn_001/code/tsp/atsp_gnn/jobs/search/12201359/best_model_rel_ss_tt_sum/trial_0 | ATSP100 | iterations: 6 | Agg: sum | Rel: ss+tt | Instances: 30 | Avg Gap: 2.716 % | Total Time: 3.888 s
+/project/c_gnn_001/code/tsp/atsp_gnn/jobs/search/12201359/best_model_rel_ss_tt_sum/trial_0 | ATSP100 | iterations: 3 | Agg: sum | Rel: ss+tt | Instances: 30 | Avg Gap: 3.283 % | Total Time: 1.955 s
+/project/c_gnn_001/code/tsp/atsp_gnn/jobs/search/12201359/best_model_rel_ss_tt_sum/trial_0 | ATSP100 | iterations: 0 | Agg: sum | Rel: ss+tt | Instances: 30 | Avg Gap: 9.887 % | Total Time: 0.000 s
+/project/c_gnn_001/code/tsp/atsp_gnn/jobs/search/12201359/best_model_rel_ss_tt_sum/trial_0 | ATSP150 | iterations: 2 | Agg: sum | Rel: ss+tt | Instances: 30 | Avg Gap: 4.925 % | Total Time: 4.649 s
+/project/c_gnn_001/code/tsp/atsp_gnn/jobs/search/12201359/best_model_rel_ss_tt_sum/trial_0 | ATSP150 | iterations: 1 | Agg: sum | Rel: ss+tt | Instances: 30 | Avg Gap: 6.026 % | Total Time: 2.323 s
+/project/c_gnn_001/code/tsp/atsp_gnn/jobs/search/12201359/best_model_rel_ss_tt_sum/trial_0 | ATSP150 | iterations: 0 | Agg: sum | Rel: ss+tt | Instances: 30 | Avg Gap: 10.796 % | Total Time: 0.030 s
+/project/c_gnn_001/code/tsp/atsp_gnn/jobs/search/12201359/best_model_rel_ss_tt_sum/trial_0 | ATSP250 | iterations: 1 | Agg: sum | Rel: ss+tt | Instances: 30 | Avg Gap: 6.365 % | Total Time: 11.218 s
+/project/c_gnn_001/code/tsp/atsp_gnn/jobs/search/12201359/best_model_rel_ss_tt_sum/trial_0 | ATSP250 | iterations: 0 | Agg: sum | Rel: ss+tt | Instances: 30 | Avg Gap: 10.605 % | Total Time: 0.097 s
+/project/c_gnn_001/code/tsp/atsp_gnn/jobs/search/12201359/best_model_rel_ss_tt_sum/trial_0 | ATSP500 | iterations: 0 | Agg: sum | Rel: ss+tt | Instances: 30 | Avg Gap: 11.858 % | Total Time: 0.545 s
+/project/c_gnn_001/code/tsp/atsp_gnn/jobs/search/12201359/best_model_rel_ss_tt_sum/trial_0 | ATSP500 | iterations: 1 | Agg: sum | Rel: ss+tt | Instances: 30 | Avg Gap: 10.501 % | Total Time: 7.207 s
+/project/c_gnn_001/code/tsp/atsp_gnn/jobs/search/12201359/best_model_rel_st_sum/trial_0 | ATSP100 | iterations: 9 | Agg: sum | Rel: st | Instances: 30 | Avg Gap: 3.742 % | Total Time: 5.884 s
+/project/c_gnn_001/code/tsp/atsp_gnn/jobs/search/12201359/best_model_rel_st_sum/trial_0 | ATSP100 | iterations: 6 | Agg: sum | Rel: st | Instances: 30 | Avg Gap: 4.053 % | Total Time: 3.908 s
+/project/c_gnn_001/code/tsp/atsp_gnn/jobs/search/12201359/best_model_rel_st_sum/trial_0 | ATSP100 | iterations: 3 | Agg: sum | Rel: st | Instances: 30 | Avg Gap: 5.389 % | Total Time: 1.907 s
+/project/c_gnn_001/code/tsp/atsp_gnn/jobs/search/12201359/best_model_rel_st_sum/trial_0 | ATSP100 | iterations: 0 | Agg: sum | Rel: st | Instances: 30 | Avg Gap: 21.795 % | Total Time: 0.000 s
+/project/c_gnn_001/code/tsp/atsp_gnn/jobs/search/12201359/best_model_rel_st_sum/trial_0 | ATSP150 | iterations: 2 | Agg: sum | Rel: st | Instances: 30 | Avg Gap: 9.157 % | Total Time: 4.297 s
+/project/c_gnn_001/code/tsp/atsp_gnn/jobs/search/12201359/best_model_rel_st_sum/trial_0 | ATSP150 | iterations: 1 | Agg: sum | Rel: st | Instances: 30 | Avg Gap: 13.140 % | Total Time: 2.087 s
+/project/c_gnn_001/code/tsp/atsp_gnn/jobs/search/12201359/best_model_rel_st_sum/trial_0 | ATSP150 | iterations: 0 | Agg: sum | Rel: st | Instances: 30 | Avg Gap: 27.915 % | Total Time: 0.030 s
+/project/c_gnn_001/code/tsp/atsp_gnn/jobs/search/12201359/best_model_rel_st_sum/trial_0 | ATSP250 | iterations: 1 | Agg: sum | Rel: st | Instances: 30 | Avg Gap: 15.182 % | Total Time: 10.248 s
+/project/c_gnn_001/code/tsp/atsp_gnn/jobs/search/12201359/best_model_rel_st_sum/trial_0 | ATSP250 | iterations: 0 | Agg: sum | Rel: st | Instances: 30 | Avg Gap: 31.031 % | Total Time: 0.094 s
+Skipping /project/c_gnn_001/code/tsp/atsp_gnn/jobs/search/12201359/best_model_rel_st_sum/trial_0 ATSP500: no instances found
+
+[Incubating] Problems report is available at: file:///project/c_gnn_001/code/tsp/regret_driven_heuristics/build/reports/problems/problems-report.html
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 10.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/9.0.0/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 3m 32s
+2 actionable tasks: 2 executed
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.0.0/userguide/configuration_cache_enabling.html

@@ -1,0 +1,64 @@
+Starting a Gradle Daemon, 2 incompatible and 2 stopped Daemons could not be reused, use --status for details
+> Task :checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :compileKotlin UP-TO-DATE
+> Task :compileJava NO-SOURCE
+> Task :processResources NO-SOURCE
+> Task :classes UP-TO-DATE
+
+> Task :run
+ATSP100 | iterations: 9 | Agg: attn | Rel: pp+st | Instances: 30 | Avg Gap: 4.222 % | Total Time: 7.571 s
+ATSP100 | iterations: 6 | Agg: attn | Rel: pp+st | Instances: 30 | Avg Gap: 4.805 % | Total Time: 4.906 s
+ATSP100 | iterations: 3 | Agg: attn | Rel: pp+st | Instances: 30 | Avg Gap: 6.636 % | Total Time: 2.409 s
+ATSP100 | iterations: 0 | Agg: attn | Rel: pp+st | Instances: 30 | Avg Gap: 23.969 % | Total Time: 0.002 s
+ATSP150 | iterations: 2 | Agg: attn | Rel: pp+st | Instances: 30 | Avg Gap: 9.111 % | Total Time: 5.984 s
+ATSP150 | iterations: 1 | Agg: attn | Rel: pp+st | Instances: 30 | Avg Gap: 12.074 % | Total Time: 2.960 s
+ATSP150 | iterations: 0 | Agg: attn | Rel: pp+st | Instances: 30 | Avg Gap: 27.181 % | Total Time: 0.030 s
+ATSP250 | iterations: 1 | Agg: attn | Rel: pp+st | Instances: 30 | Avg Gap: 13.665 % | Total Time: 14.295 s
+ATSP250 | iterations: 0 | Agg: attn | Rel: pp+st | Instances: 30 | Avg Gap: 26.404 % | Total Time: 0.121 s
+ATSP500 | iterations: 0 | Agg: attn | Rel: pp+st | Instances: 30 | Avg Gap: 25.832 % | Total Time: 0.514 s
+ATSP500 | iterations: 1 | Agg: attn | Rel: pp+st | Instances: 30 | Avg Gap: 22.619 % | Total Time: 6.644 s
+ATSP100 | iterations: 9 | Agg: concat | Rel: st | Instances: 30 | Avg Gap: 3.339 % | Total Time: 5.525 s
+ATSP100 | iterations: 6 | Agg: concat | Rel: st | Instances: 30 | Avg Gap: 3.802 % | Total Time: 3.684 s
+ATSP100 | iterations: 3 | Agg: concat | Rel: st | Instances: 30 | Avg Gap: 4.728 % | Total Time: 1.811 s
+ATSP100 | iterations: 0 | Agg: concat | Rel: st | Instances: 30 | Avg Gap: 15.658 % | Total Time: 0.000 s
+ATSP150 | iterations: 2 | Agg: concat | Rel: st | Instances: 30 | Avg Gap: 6.902 % | Total Time: 4.349 s
+ATSP150 | iterations: 1 | Agg: concat | Rel: st | Instances: 30 | Avg Gap: 8.875 % | Total Time: 2.198 s
+ATSP150 | iterations: 0 | Agg: concat | Rel: st | Instances: 30 | Avg Gap: 15.351 % | Total Time: 0.030 s
+ATSP250 | iterations: 1 | Agg: concat | Rel: st | Instances: 30 | Avg Gap: 9.986 % | Total Time: 10.383 s
+ATSP250 | iterations: 0 | Agg: concat | Rel: st | Instances: 30 | Avg Gap: 16.387 % | Total Time: 0.095 s
+ATSP500 | iterations: 0 | Agg: concat | Rel: st | Instances: 30 | Avg Gap: 17.397 % | Total Time: 0.446 s
+ATSP500 | iterations: 1 | Agg: concat | Rel: st | Instances: 30 | Avg Gap: 15.354 % | Total Time: 6.482 s
+ATSP100 | iterations: 9 | Agg: sum | Rel: ss+tt | Instances: 30 | Avg Gap: 2.605 % | Total Time: 5.574 s
+ATSP100 | iterations: 6 | Agg: sum | Rel: ss+tt | Instances: 30 | Avg Gap: 2.716 % | Total Time: 3.682 s
+ATSP100 | iterations: 3 | Agg: sum | Rel: ss+tt | Instances: 30 | Avg Gap: 3.283 % | Total Time: 1.847 s
+ATSP100 | iterations: 0 | Agg: sum | Rel: ss+tt | Instances: 30 | Avg Gap: 9.887 % | Total Time: 0.000 s
+ATSP150 | iterations: 2 | Agg: sum | Rel: ss+tt | Instances: 30 | Avg Gap: 4.925 % | Total Time: 4.356 s
+ATSP150 | iterations: 1 | Agg: sum | Rel: ss+tt | Instances: 30 | Avg Gap: 6.026 % | Total Time: 2.128 s
+ATSP150 | iterations: 0 | Agg: sum | Rel: ss+tt | Instances: 30 | Avg Gap: 10.796 % | Total Time: 0.030 s
+ATSP250 | iterations: 1 | Agg: sum | Rel: ss+tt | Instances: 30 | Avg Gap: 6.365 % | Total Time: 10.415 s
+ATSP250 | iterations: 0 | Agg: sum | Rel: ss+tt | Instances: 30 | Avg Gap: 10.605 % | Total Time: 0.092 s
+ATSP500 | iterations: 0 | Agg: sum | Rel: ss+tt | Instances: 30 | Avg Gap: 11.858 % | Total Time: 0.436 s
+ATSP500 | iterations: 1 | Agg: sum | Rel: ss+tt | Instances: 30 | Avg Gap: 10.501 % | Total Time: 6.471 s
+ATSP100 | iterations: 9 | Agg: sum | Rel: st | Instances: 30 | Avg Gap: 3.742 % | Total Time: 5.497 s
+ATSP100 | iterations: 6 | Agg: sum | Rel: st | Instances: 30 | Avg Gap: 4.053 % | Total Time: 3.621 s
+ATSP100 | iterations: 3 | Agg: sum | Rel: st | Instances: 30 | Avg Gap: 5.389 % | Total Time: 1.888 s
+ATSP100 | iterations: 0 | Agg: sum | Rel: st | Instances: 30 | Avg Gap: 21.795 % | Total Time: 0.000 s
+ATSP150 | iterations: 2 | Agg: sum | Rel: st | Instances: 30 | Avg Gap: 9.157 % | Total Time: 4.351 s
+ATSP150 | iterations: 1 | Agg: sum | Rel: st | Instances: 30 | Avg Gap: 13.140 % | Total Time: 2.137 s
+ATSP150 | iterations: 0 | Agg: sum | Rel: st | Instances: 30 | Avg Gap: 27.915 % | Total Time: 0.030 s
+ATSP250 | iterations: 1 | Agg: sum | Rel: st | Instances: 30 | Avg Gap: 15.182 % | Total Time: 10.449 s
+ATSP250 | iterations: 0 | Agg: sum | Rel: st | Instances: 30 | Avg Gap: 31.031 % | Total Time: 0.113 s
+ATSP500 | iterations: 0 | Agg: sum | Rel: st | Instances: 30 | Avg Gap: 77.862 % | Total Time: 0.976 s
+ATSP500 | iterations: 1 | Agg: sum | Rel: st | Instances: 30 | Avg Gap: 49.106 % | Total Time: 6.658 s
+
+[Incubating] Problems report is available at: file:///project/c_gnn_001/code/tsp/regret_driven_heuristics/build/reports/problems/problems-report.html
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 10.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/9.0.0/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 3m 38s
+2 actionable tasks: 1 executed, 1 up-to-date
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.0.0/userguide/configuration_cache_enabling.html

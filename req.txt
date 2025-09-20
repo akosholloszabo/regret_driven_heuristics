@@ -1,0 +1,4 @@
+export JAVA_HOME=/project/c_gnn_001/tools/java/jdk-17.0.12
+export PATH=$JAVA_HOME/bin:$PATH
+export PATH=/project/c_gnn_001/conda_envs/torch/gradle/bin:$PATH
+conda install -c conda-forge gradle

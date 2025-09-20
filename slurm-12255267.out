@@ -1,0 +1,8 @@
+Starting a Gradle Daemon, 2 incompatible and 2 stopped Daemons could not be reused, use --status for details
+> Task :checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :processResources NO-SOURCE
+> Task :compileKotlin
+> Task :compileJava NO-SOURCE
+> Task :classes UP-TO-DATE
+> Task :run
+/project/c_gnn_001/code/tsp/atsp_gnn/jobs/search2/12201357/best_model_rel_pp_ss_st_tt_attn_export/best_model_rel_pp_ss_st_tt_attn/trial_0 | ATSP1000 | iterations: 0 | Agg: attn | Rel: pp+ss+st+tt | Instances: 30 | Avg Gap: -67.572 % | Total Time: 9.706 s

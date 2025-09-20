@@ -11,80 +11,131 @@ import kotlin.math.sqrt
 import kotlin.time.measureTime
 import kotlin.time.measureTimedValue
 
-//size 100, 5s, 8x 3-opt
-//size 150, 5s,
-// 5s,7s,7s 30 samples
+private val DEFAULT_TRIAL_DIRECTORIES = listOf(
+    "/project/c_gnn_001/code/tsp/atsp_gnn/jobs/search2/12201357/best_model_rel_pp_ss_st_tt_attn_export/best_model_rel_pp_ss_st_tt_attn/trial_0",
+).map(::File)
+private const val TRIAL_DIRECTORIES_ENV = "TRIAL_DIRECTORIES"
+
+private val iterationScheduleBySize = mapOf(
+    1000 to listOf(0, 1),
+)
+
+data class ModelMetadata(
+    val aggregation: String,
+    val relations: List<String>,
+) {
+    val relationLabel: String = relations.joinToString("+")
+}
+
 fun main() {
-    (arrayOf(
-        Pair(9, 100),
-        Pair(8, 100),
-        Pair(0, 100),
-        Pair(2, 150),
-        Pair(1, 150),
-        Pair(0, 150),
-        Pair(1, 250),
-        Pair(0, 250),
-        Pair(1, 500),
-        Pair(0, 500),
-    )).forEach { (threeOptIteration, modelSize) ->
+    val explicitTrialDirectories = System.getenv(TRIAL_DIRECTORIES_ENV)
+        ?.takeIf { it.isNotBlank() }
+        ?.split(File.pathSeparator)
+        ?.map { it.trim() }
+        ?.filter { it.isNotEmpty() }
+        ?.map(::File)
+        ?.takeIf { it.isNotEmpty() }
 
-        val regretData = loadRegrets(
-            File(
-                "/project/c_gnn_001/code/tsp/atsp_model_train_result/Oct24_20-18-13_HetroGATConcat_trained_ATSP50/trial_0/trial_0",
-                "test_atsp$modelSize"
-            )
-        )
+    val trialDirectories = (explicitTrialDirectories ?: DEFAULT_TRIAL_DIRECTORIES)
+        .distinctBy { it.absolutePath }
+        .sortedBy { it.absolutePath }
 
-        val costDataPerNoiseLevelAndInstance =
-            regretData
-                .mapIndexed { regretRecordIndex, regretRecord ->
-                    measureTimedValue {
-                        val permutation = oneShotEdgeBuilder(regretRecord.predictedRegretMatrix)
-
-                        val initialCost = calcCostOfTspSolution(permutation, regretRecord.distanceMatrix)
-
-                        var bestCost = initialCost
-                        measureTime {
-                            repeat(threeOptIteration) {
-                                bestCost = threeOptCycle(
-                                    permutation,
-                                    regretRecord,
-                                    regretRecord.predictedRegretMatrix,
-                                    bestCost
-                                )
-                            }
-                        }//.let { print(it) }
-
-                        CostRecord(
-                            initialCost = initialCost,
-                            builtCost = initialCost,
-                            optimizedCost = bestCost,
-                            optimal = regretRecord.optCost
-                        )
-                    }
-                    // .also {
-                    //     println("Regret record $regretRecordIndex: processing instance took: ${it.duration} gap: ${it.value.optimizedCost / it.value.optimal - 1.0}")
-                    // }
-                }
-                .toList()
-
-        val gapStats = costDataPerNoiseLevelAndInstance
-            .map { (it.value.optimizedCost / it.value.optimal - 1.0) * 100 } // percentage
-            .toDoubleArray()
-            .statistics()
-
-        val timeStats = costDataPerNoiseLevelAndInstance
-            .map { it.duration.inWholeMilliseconds.toDouble() / 1000.0 } // seconds
-            .toDoubleArray()
-            .statistics()
-
-        val numInstances = costDataPerNoiseLevelAndInstance.size
-
-        println(
-            "ATSP$modelSize | Instances: $numInstances | iterations: $threeOptIteration | Avg Gap: %.3f %% | Total Time: %.3f s"
-                .format(gapStats.avg, timeStats.sum)
-        )
+    if (trialDirectories.isEmpty()) {
+        println("No trial directories configured.")
+        return
     }
+
+    for (trialDir in trialDirectories) {
+        if (!trialDir.isDirectory) {
+            println("Skipping ${trialDir.absolutePath}: not a directory")
+            continue
+        }
+
+        val modelDir = trialDir.parentFile
+        if (modelDir == null || !modelDir.isDirectory) {
+            println("Skipping ${trialDir.absolutePath}: missing parent model directory")
+            continue
+        }
+
+        val metadata = modelDir.toModelMetadata()
+        if (metadata == null) {
+            println("Skipping ${trialDir.absolutePath}: parent directory does not match expected pattern")
+            continue
+        }
+
+        for ((modelSize, iterationCounts) in iterationScheduleBySize) {
+            val dataDir = File(trialDir, "test_atsp$modelSize")
+            if (!dataDir.isDirectory) {
+                println("Skipping ${trialDir.absolutePath} ATSP$modelSize: missing ${dataDir.name}")
+                continue
+            }
+
+            val regretData = loadRegrets(dataDir)
+            if (regretData.isEmpty()) {
+                println("Skipping ${trialDir.absolutePath} ATSP$modelSize: no instances found")
+                continue
+            }
+
+            for (threeOptIteration in iterationCounts) {
+                val costDataPerInstance = regretData
+                    .map { regretRecord ->
+                        measureTimedValue {
+                            val permutation = oneShotEdgeBuilder(regretRecord.predictedRegretMatrix)
+
+                            val initialCost = calcCostOfTspSolution(permutation, regretRecord.distanceMatrix)
+
+                            var bestCost = initialCost
+                            measureTime {
+                                repeat(threeOptIteration) {
+                                    bestCost = threeOptCycle(
+                                        permutation,
+                                        regretRecord,
+                                        regretRecord.predictedRegretMatrix,
+                                        bestCost
+                                    )
+                                }
+                            }
+
+                            CostRecord(
+                                initialCost = initialCost,
+                                builtCost = initialCost,
+                                optimizedCost = bestCost,
+                                optimal = regretRecord.optCost
+                            )
+                        }
+                    }
+
+                val gapStats = costDataPerInstance
+                    .map { (it.value.optimizedCost / it.value.optimal - 1.0) * 100 }
+                    .toDoubleArray()
+                    .statistics()
+
+                val timeStats = costDataPerInstance
+                    .map { it.duration.inWholeMilliseconds.toDouble() / 1000.0 }
+                    .toDoubleArray()
+                    .statistics()
+
+                val numInstances = costDataPerInstance.size
+
+                println(
+                    "${trialDir.absolutePath} | ATSP$modelSize | iterations: $threeOptIteration | Agg: ${metadata.aggregation} | Rel: ${metadata.relationLabel} | Instances: $numInstances | Avg Gap: %.3f %% | Total Time: %.3f s"
+                        .format(gapStats.avg, timeStats.sum)
+                )
+            }
+        }
+    }
+}
+
+private fun File.toModelMetadata(): ModelMetadata? {
+    val prefix = "best_model_rel_"
+    if (!name.startsWith(prefix)) return null
+
+    val tokens = name.removePrefix(prefix).split("_")
+    if (tokens.size < 2) return null
+
+    val aggregation = tokens.last()
+    val relations = tokens.dropLast(1)
+    return ModelMetadata(aggregation = aggregation, relations = relations)
 }
 
 data class CostRecord(
