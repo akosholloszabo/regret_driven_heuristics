@@ -3,13 +3,10 @@ package hu.akos.hollo.szabo
 import hu.akos.hollo.szabo.heuristics.calcCostOfTspSolution
 import hu.akos.hollo.szabo.heuristics.oneShotEdgeBuilder
 import hu.akos.hollo.szabo.heuristics.threeOptCycle
-import hu.akos.hollo.szabo.model.CostRecord
-import hu.akos.hollo.szabo.model.loadRegrets
-import hu.akos.hollo.szabo.model.statistics
-import hu.akos.hollo.szabo.model.get
+import hu.akos.hollo.szabo.model.*
 import java.io.File
 import java.util.*
-import kotlin.math.max
+import kotlin.math.absoluteValue
 import kotlin.time.measureTime
 import kotlin.time.measureTimedValue
 
@@ -17,36 +14,31 @@ import kotlin.time.measureTimedValue
 
 fun main() {
     File("output/output.txt").writeText("")
-    sequenceOf(64/*100 , 150, 250, 500*/).forEach { problemSize ->
-        (0..100).asSequence().map { it / 100.0 }.forEach { noiseLevel ->
-            (0..10).asSequence().forEach { threeOptIteration ->
-                evaluate( threeOptIteration, problemSize,noiseLevel)
-            }
+    val regretData = loadRegrets(
+        File("H:\\by-domain\\official\\phd\\research\\datasets\\2025_09_18_atsp50_for_noise_analyses")
+    )
+    println("Data loaded: ${regretData.size} instances")
+        (0..10).asSequence().forEach { threeOptIteration ->
+            (0..50 step 2).asSequence().map { it / 100.0 }.forEach { noiseLevel ->
+            evaluate(threeOptIteration, regretData, noiseLevel)
         }
     }
 }
 
-private fun evaluate(threeOptIteration: Int, modelSize: Int, noiseLevel: Double) {
-    File("output/output.txt").appendText("NEW RUN: modelSize: $modelSize, noiseLevel: $noiseLevel, threeOptIteration: $threeOptIteration\n")
+private fun evaluate(threeOptIteration: Int, _regretData: List<RegretData>, noiseLevel: Double) {
+    File("output/output.txt").appendText("NEW RUN: noiseLevel: $noiseLevel, threeOptIteration: $threeOptIteration\n")
     val sampleCount = 10
-
-    val regretData = loadRegrets(
-//        File(
-//            "H:\\by-domain\\official\\phd\\research\\datasets\\2024_10_17_final_result_v1_atsp",
-//            "test_atsp$modelSize"
-//        )
-                File(
-            "H:\\by-domain\\official\\phd\\research\\datasets\\2024_10_05_test_model4"
-        )
-    ).flatMap { regretRecord ->
+    val regretData = _regretData.flatMap { regretRecord ->
+        val max = regretRecord.expectedRegretMatrix.maxOf { it.max() }
         (0 until sampleCount).asSequence().map {
             regretRecord.copy(
                 predictedRegretMatrix = Array(regretRecord.expectedRegretMatrix.size) { index ->
                     DoubleArray(regretRecord.expectedRegretMatrix.size) { innerIndex ->
-                        regretRecord.expectedRegretMatrix[innerIndex, index ].let {regretValue->
-                            Random().nextGaussian(1.0, noiseLevel)
-                                .let { max(0.0, it) }
-                                .times(regretValue)
+                        regretRecord.expectedRegretMatrix[index, innerIndex].let { regretValue ->
+                            Random().nextGaussian(0.0, noiseLevel)
+                                .absoluteValue
+                                .times(max)
+                                .plus(regretValue)
                         }
                     }
 //                    regretRecord.expectedRegretMatrix[index]
@@ -86,9 +78,9 @@ private fun evaluate(threeOptIteration: Int, modelSize: Int, noiseLevel: Double)
                     optimizedCost = bestCost,
                     optimal = regretRecord.optCost
                 )
-            }.also {
-                File("output/output.txt").appendText("Regret record $regretRecordIndex: processing instance took: ${it.duration} gap: ${it.value.optimizedCost / it.value.optimal - 1.0} \n")
-            }
+            }//.also {
+                //File("output/output.txt").appendText("Regret record $regretRecordIndex: processing instance took: ${it.duration} gap: ${it.value.optimizedCost / it.value.optimal - 1.0} \n")
+            //}
         }
         .toList()
     File("output/output.txt").appendText(

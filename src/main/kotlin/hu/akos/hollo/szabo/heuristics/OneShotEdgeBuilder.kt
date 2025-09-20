@@ -21,9 +21,10 @@ fun oneShotEdgeBuilder(regret: Array<DoubleArray>): IntArray {
                     value = value
                 )
             }
-            .map {
-                it
+            .map { sameSourceEdges ->
+                sameSourceEdges
                     .filter { it.sourceNodeIndex != it.targetNodeIndex }
+                    .sortedBy { it.value }
                     .toList()
             }
             .toList()
@@ -31,11 +32,7 @@ fun oneShotEdgeBuilder(regret: Array<DoubleArray>): IntArray {
     while (selectedEdges != regret.dimensions.first - 1) {
 
         graphEdges.asSequence()
-            .map {
-                it.asSequence()
-                    .filter { it.sourceNodeIndex != it.targetNodeIndex }
-                    .minBy { it.value }
-            }
+            .map {  it.first() }
             .sortedBy { it.value }
             .filter { edge -> sequentialRepresentation[edge.sourceNodeIndex] == Int.MIN_VALUE }
             .filter { edge -> inverseSequentialRepresentation[edge.targetNodeIndex] == Int.MIN_VALUE }
@@ -75,11 +72,18 @@ fun oneShotEdgeBuilder(regret: Array<DoubleArray>): IntArray {
         graphEdges = graphEdges
             .map {
                 it.asSequence()
-                    .filter { edge -> sequentialRepresentation[edge.sourceNodeIndex] == Int.MIN_VALUE }
-                    .filter { edge -> inverseSequentialRepresentation[edge.targetNodeIndex] == Int.MIN_VALUE }
-                    .filter { edge -> sequentialRepresentation[edge.targetNodeIndex] != edge.sourceNodeIndex }
-                    .filter { edge -> sequencesFromSource[edge.targetNodeIndex] != edge.sourceNodeIndex }
-                    .filter { edge -> sequencesToTarget[edge.sourceNodeIndex] != edge.targetNodeIndex }
+                    .dropWhile { edge ->
+                        sequentialRepresentation[edge.sourceNodeIndex] != Int.MIN_VALUE ||
+                                inverseSequentialRepresentation[edge.targetNodeIndex] != Int.MIN_VALUE ||
+                                sequentialRepresentation[edge.targetNodeIndex] == edge.sourceNodeIndex ||
+                                sequencesFromSource[edge.targetNodeIndex] == edge.sourceNodeIndex ||
+                                sequencesToTarget[edge.sourceNodeIndex] == edge.targetNodeIndex
+                    }
+//                    .filter { edge -> sequentialRepresentation[edge.sourceNodeIndex] == Int.MIN_VALUE }
+//                    .filter { edge -> inverseSequentialRepresentation[edge.targetNodeIndex] == Int.MIN_VALUE }
+//                    .filter { edge -> sequentialRepresentation[edge.targetNodeIndex] != edge.sourceNodeIndex }
+//                    .filter { edge -> sequencesFromSource[edge.targetNodeIndex] != edge.sourceNodeIndex }
+//                    .filter { edge -> sequencesToTarget[edge.sourceNodeIndex] != edge.targetNodeIndex }
                     .toList()
             }
             .filter { it.isNotEmpty() }
