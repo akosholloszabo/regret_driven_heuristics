@@ -174,3 +174,4 @@ gradle-app.setting
 .kotlin
 output
 /src/main/resources/input/
+notebooks/output

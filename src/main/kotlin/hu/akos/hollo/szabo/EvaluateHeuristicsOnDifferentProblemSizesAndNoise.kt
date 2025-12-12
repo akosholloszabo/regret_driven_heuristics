@@ -5,6 +5,7 @@ import hu.akos.hollo.szabo.heuristics.oneShotEdgeBuilder
 import hu.akos.hollo.szabo.heuristics.threeOptCycle
 import hu.akos.hollo.szabo.model.*
 import java.io.File
+import java.time.LocalDate
 import java.util.*
 import kotlin.math.absoluteValue
 import kotlin.time.measureTime
@@ -13,7 +14,9 @@ import kotlin.time.measureTimedValue
 //TODO: Use KMath lib for platform independence
 
 fun main() {
-    File("output/output.txt").writeText("")
+    val currentDate = LocalDate.now()
+    println(currentDate.toString())
+    File("output/output-${currentDate}.txt").writeText("")
     val regretData = loadRegrets(
         File("H:\\by-domain\\official\\phd\\research\\datasets\\2025_09_18_atsp50_for_noise_analyses")
     )
@@ -26,8 +29,9 @@ fun main() {
 }
 
 private fun evaluate(threeOptIteration: Int, _regretData: List<RegretData>, noiseLevel: Double) {
-    File("output/output.txt").appendText("NEW RUN: noiseLevel: $noiseLevel, threeOptIteration: $threeOptIteration\n")
-    val sampleCount = 10
+    val file = File("output/output-${LocalDate.now()}.txt")
+    file.appendText("NEW RUN: noiseLevel: $noiseLevel, threeOptIteration: $threeOptIteration\n")
+    val sampleCount = 1
     val regretData = _regretData.flatMap { regretRecord ->
         val max = regretRecord.expectedRegretMatrix.maxOf { it.max() }
         (0 until sampleCount).asSequence().map {
@@ -79,15 +83,15 @@ private fun evaluate(threeOptIteration: Int, _regretData: List<RegretData>, nois
                     optimal = regretRecord.optCost
                 )
             }//.also {
-                //File("output/output.txt").appendText("Regret record $regretRecordIndex: processing instance took: ${it.duration} gap: ${it.value.optimizedCost / it.value.optimal - 1.0} \n")
+                //file.appendText("Regret record $regretRecordIndex: processing instance took: ${it.duration} gap: ${it.value.optimizedCost / it.value.optimal - 1.0} \n")
             //}
         }
         .toList()
-    File("output/output.txt").appendText(
+    file.appendText(
         costDataPerInstance.map { it.value.optimizedCost / it.value.optimal - 1.0 }.toDoubleArray()
             .statistics().toString().plus("\n")
     )
-    File("output/output.txt").appendText(
+    file.appendText(
         costDataPerInstance.map { it.duration.inWholeMilliseconds.toDouble() }.toDoubleArray()
             .statistics().toString().plus("\n")
     )
